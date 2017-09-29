@@ -4,6 +4,9 @@ import base64
 import logging
 import logging.config
 import yaml
+import json
+
+from devices import Devices
 
 logger = logging.getLogger(__name__)
 
@@ -16,6 +19,7 @@ class TestObject(object):
 
 		self.username = username
 		self.api_key = api_key
+		self.devices = Devices(self)
 
 	def request(self, method, endpoint):
 
@@ -24,9 +28,11 @@ class TestObject(object):
 		http_conn = httplib2.Http()
 		http_conn.add_credentials(self.username, self.api_key)
 
-		response, content = http_conn.request(url, method=method)
+		response_info, content = http_conn.request(url, method=method)
 
-		logger.info("response: %s",response)
-		logger.debug("content: %s", content)
+		content_json = json.loads(content)
 
-		return content
+		logger.info("response: %s",response_info)
+		logger.debug("content: %s", content_json)
+
+		return content_json
