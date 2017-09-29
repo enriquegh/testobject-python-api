@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: null
+    headers:
+      accept-encoding: ['gzip, deflate']
+      user-agent: [Python-httplib2/0.10.3 (gzip)]
+    method: GET
+    uri: https://app.testobject.com/api/rest/v2/devices/iPhone_5_free
+  response:
+    body: {string: !!python/unicode ''}
+    headers:
+      connection: [close]
+      content-security-policy: ['frame-ancestors https://*.testobject.com']
+      date: ['Fri, 29 Sep 2017 21:49:58 GMT']
+      referrer-policy: [no-referrer]
+      strict-transport-security: [max-age=31536000; includeSubDomains; preload]
+      www-authenticate: [BASIC realm="application"]
+      x-content-type-options: [nosniff]
+      x-frame-options: [SAMEORIGIN]
+      x-xss-protection: [1; mode=block]
+    status: {code: 401, message: Unauthorized}
+- request:
+    body: null
+    headers:
+      accept-encoding: ['gzip, deflate']
+      user-agent: [Python-httplib2/0.10.3 (gzip)]
+    method: GET
+    uri: https://app.testobject.com/api/rest/v2/devices/iPhone_5_free
+  response:
+    body: {string: !!python/unicode '{"US":{"id":"iPhone_5_free","name":"iPhone 5
+        Free","modelNumber":"Model A1429","manufacturer":["Apple"],"isArm":true,"hasHardwareKeyboard":false,"hasOnScreenButtons":false,"abiType":"armv7s","os":"IOS","osVersion":"10.0.2","apiLevel":0,"screenSize":4.0,"resolutionWidth":640,"resolutionHeight":1136,"dpi":326,"pixelsPerPoint":2,"isTablet":false,"defaultOrientation":"PORTRAIT","ramSize":1024,"internalStorageSize":16384,"sdCardSize":0,"cpuCores":2,"cpuFrequency":1300,"supportsMockLocations":true,"supportsAppiumWebAppTesting":true,"supportsXcuiTest":true,"isKeyGuardDisabled":false,"isRooted":false,"isPrivate":false,"isAlternativeIoEnabled":true,"deviceFamily":"IPHONE","dpiName":"xhdpi","supportsManualWebTesting":true}}'}
+    headers:
+      connection: [close]
+      content-security-policy: ['frame-ancestors https://*.testobject.com']
+      content-type: [application/json]
+      date: ['Fri, 29 Sep 2017 21:49:59 GMT']
+      expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
+      referrer-policy: [no-referrer]
+      set-cookie: [JSESSIONID=app_1~app-24i9moy32awuvcp4162agtjgm8122.app-2;Path=/api;Domain=.app.testobject.com]
+      strict-transport-security: [max-age=31536000; includeSubDomains; preload]
+      x-content-type-options: [nosniff]
+      x-frame-options: [SAMEORIGIN]
+      x-xss-protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1

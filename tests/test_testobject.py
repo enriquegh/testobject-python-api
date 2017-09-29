@@ -12,7 +12,7 @@ def to():
 
     return TestObject(username, api_key)
 
-@vcr.use_cassette('tests/vcr_cassettes/all-devices.yml')
+@vcr.use_cassette('tests/vcr_cassettes/all-devices.yml', filter_headers=['authorization'])
 def test_get_devices(to):
 
     response = to.devices.get_devices()
@@ -21,7 +21,7 @@ def test_get_devices(to):
     assert response, dict
 
 
-@vcr.use_cassette('tests/vcr_cassettes/available-devices.yml')
+@vcr.use_cassette('tests/vcr_cassettes/available-devices.yml', filter_headers=['authorization'])
 def test_get_available_devices(to):
 
     response = to.devices.get_available_devices()
@@ -30,7 +30,7 @@ def test_get_available_devices(to):
     assert response, dict
 
 
-@vcr.use_cassette('tests/vcr_cassettes/device.yml')
+@vcr.use_cassette('tests/vcr_cassettes/device.yml', filter_headers=['authorization'])
 def test_get_device(to):
 
     device_name = 'iPhone_5_free'
