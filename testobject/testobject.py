@@ -6,7 +6,7 @@ import logging.config
 import yaml
 import json
 
-from devices import Devices
+from .devices import Devices
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +30,8 @@ class TestObject(object):
 
 		response_info, content = http_conn.request(url, method=method)
 
+		#vcrpy sends requests as a bytestring and this is not allowed as a parameter on json on python 3
+		content = content.decode('utf-8') 
 		content_json = json.loads(content)
 
 		logger.info("response: %s",response_info)
