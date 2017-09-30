@@ -3,7 +3,6 @@ import os
 import pytest
 
 from testobject import TestObject
-from testobject import Devices
 
 @pytest.fixture
 def to():
