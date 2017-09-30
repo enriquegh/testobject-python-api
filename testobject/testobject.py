@@ -7,6 +7,7 @@ import yaml
 import json
 
 from .devices import Devices
+from .suites import Suites
 
 logger = logging.getLogger(__name__)
 
@@ -20,13 +21,19 @@ class TestObject(object):
 		self.username = username
 		self.api_key = api_key
 		self.devices = Devices(self)
+		self.suites = Suites(self)
 
-	def request(self, method, endpoint):
+	def request(self, method, endpoint, auth_type=None):
 
 		url = TestObject.URL_BASE + endpoint
 		logger.info("URL: %s",url)
 		http_conn = httplib2.Http()
-		http_conn.add_credentials(self.username, self.api_key)
+
+		if auth_type == 'suite':
+			http_conn.add_credentials(self.api_key, "")
+		else:
+			http_conn.add_credentials(self.username, self.api_key)
+
 
 		response_info, content = http_conn.request(url, method=method)
 

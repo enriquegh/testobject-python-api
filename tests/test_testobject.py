@@ -39,3 +39,11 @@ def test_get_device(to):
 
     assert response, dict
     assert response['US']['id'] == device_name
+
+
+@vcr.use_cassette('tests/vcr_cassettes/get-device-ids.yml', filter_headers=['authorization'])
+def test_get_devices_ids(to):
+
+    response = to.suites.get_devices_ids(7)
+
+    assert response, dict
