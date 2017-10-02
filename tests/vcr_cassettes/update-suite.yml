@@ -1,0 +1,26 @@
+interactions:
+- request:
+    body: !!python/unicode '{"title": "MY NAME CHANGING SUITE"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['35']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: PUT
+    uri: https://app.testobject.com/api/rest/v2/appium/suites/7
+  response:
+    body: {string: !!python/unicode '{"id":7,"title":"MY NAME CHANGING SUITE","appVersionId":1,"frameworkVersion":"1.6.4","deviceIds":{"US":["iPhone_SE_10_2_POC101","iPhone_SE_10_2_POC108"]}}'}
+    headers:
+      connection: [close]
+      content-security-policy: ['frame-ancestors https://*.testobject.com']
+      content-type: [application/json]
+      date: ['Mon, 02 Oct 2017 20:37:43 GMT']
+      referrer-policy: [no-referrer]
+      strict-transport-security: [max-age=31536000; includeSubDomains; preload]
+      x-content-type-options: [nosniff]
+      x-frame-options: [SAMEORIGIN]
+      x-xss-protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
