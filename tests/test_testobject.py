@@ -47,3 +47,13 @@ def test_get_devices_ids(to):
     response = to.suites.get_devices_ids(7)
 
     assert response, dict
+
+@vcr.use_cassette('tests/vcr_cassettes/update-suite.yml', filter_headers=['authorization'])
+def test_update_suite(to):
+    data = {}
+    data['title'] = "MY NAME CHANGING SUITE"
+
+
+    response = to.suites.update_suite(7, data)
+
+    assert response, dict
