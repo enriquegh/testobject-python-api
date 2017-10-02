@@ -1,5 +1,4 @@
 
-import httplib2
 import base64
 import logging
 import logging.config
