@@ -5,6 +5,7 @@ import logging
 import logging.config
 import yaml
 import json
+import requests
 
 from .devices import Devices
 from .suites import Suites
@@ -24,24 +25,16 @@ class TestObject(object):
 		self.suites = Suites(self)
 
 	def request(self, method, endpoint, auth_type=None):
-
 		url = TestObject.URL_BASE + endpoint
 		logger.info("URL: %s",url)
-		http_conn = httplib2.Http()
+
+		content = None
 
 		if auth_type == 'suite':
-			http_conn.add_credentials(self.api_key, "")
+			content = requests.request(method, url, auth=(self.api_key, ''))
 		else:
-			http_conn.add_credentials(self.username, self.api_key)
+			content = requests.request(method, url, auth=(self.username, self.api_key))
 
+		logger.debug("content: %s", content)
 
-		response_info, content = http_conn.request(url, method=method)
-
-		#vcrpy sends requests as a bytestring and this is not allowed as a parameter on json on python 3
-		content = content.decode('utf-8') 
-		content_json = json.loads(content)
-
-		logger.info("response: %s",response_info)
-		logger.debug("content: %s", content_json)
-
-		return content_json
+		return json.loads(content.text)

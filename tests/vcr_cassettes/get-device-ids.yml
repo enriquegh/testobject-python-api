@@ -1,0 +1,24 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.14.2]
+    method: GET
+    uri: https://app.testobject.com/api/rest/v2/appium/suites/7/deviceIds
+  response:
+    body: {string: '[{"dataCenterId":"US","dataCenterURL":"https://us1.appium.testobject.com/api/appium/wd/hub","deviceDescriptorIds":["iPhone_SE_10_2_POC101","iPhone_SE_10_2_POC108"]}]'}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['frame-ancestors https://*.testobject.com']
+      Content-Type: [application/json]
+      Date: ['Mon, 02 Oct 2017 02:32:07 GMT']
+      Referrer-Policy: [no-referrer]
+      Strict-Transport-Security: [max-age=31536000; includeSubDomains; preload]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
