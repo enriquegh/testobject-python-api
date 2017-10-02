@@ -23,16 +23,19 @@ class TestObject(object):
 		self.devices = Devices(self)
 		self.suites = Suites(self)
 
-	def request(self, method, endpoint, auth_type=None):
+	def request(self, method, endpoint, auth_type=None, data=None):
 		url = TestObject.URL_BASE + endpoint
 		logger.info("URL: %s",url)
 
 		content = None
 
+		#Appium Suites API needs a different authentication
+		# "All endpoints in Appium Suites API require basic authentication with
+		# the API Key as the username and the password left blank."
 		if auth_type == 'suite':
-			content = requests.request(method, url, auth=(self.api_key, ''))
+			content = requests.request(method, url, auth=(self.api_key, ''), json=data)
 		else:
-			content = requests.request(method, url, auth=(self.username, self.api_key))
+			content = requests.request(method, url, auth=(self.username, self.api_key), json=data)
 
 		logger.debug("content: %s", content)
 
