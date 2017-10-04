@@ -2,28 +2,10 @@ interactions:
 - request:
     body: null
     headers:
-      accept-encoding: ['gzip, deflate']
-      user-agent: [Python-httplib2/0.10.3 (gzip)]
-    method: GET
-    uri: https://app.testobject.com/api/rest/v2/devices/iPhone_5_free
-  response:
-    body: {string: !!python/unicode ''}
-    headers:
-      connection: [close]
-      content-security-policy: ['frame-ancestors https://*.testobject.com']
-      date: ['Fri, 29 Sep 2017 21:49:58 GMT']
-      referrer-policy: [no-referrer]
-      strict-transport-security: [max-age=31536000; includeSubDomains; preload]
-      www-authenticate: [BASIC realm="application"]
-      x-content-type-options: [nosniff]
-      x-frame-options: [SAMEORIGIN]
-      x-xss-protection: [1; mode=block]
-    status: {code: 401, message: Unauthorized}
-- request:
-    body: null
-    headers:
-      accept-encoding: ['gzip, deflate']
-      user-agent: [Python-httplib2/0.10.3 (gzip)]
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
     method: GET
     uri: https://app.testobject.com/api/rest/v2/devices/iPhone_5_free
   response:
@@ -33,10 +15,10 @@ interactions:
       connection: [close]
       content-security-policy: ['frame-ancestors https://*.testobject.com']
       content-type: [application/json]
-      date: ['Fri, 29 Sep 2017 21:49:59 GMT']
+      date: ['Mon, 02 Oct 2017 02:30:28 GMT']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
       referrer-policy: [no-referrer]
-      set-cookie: [JSESSIONID=app_1~app-24i9moy32awuvcp4162agtjgm8122.app-2;Path=/api;Domain=.app.testobject.com]
+      set-cookie: [JSESSIONID=app_2~app-2g5t86fsycf601scwjv6d09moa13434.app-2;Path=/api;Domain=.app.testobject.com]
       strict-transport-security: [max-age=31536000; includeSubDomains; preload]
       x-content-type-options: [nosniff]
       x-frame-options: [SAMEORIGIN]

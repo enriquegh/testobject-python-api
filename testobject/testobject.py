@@ -1,12 +1,13 @@
 
-import httplib2
 import base64
 import logging
 import logging.config
 import yaml
 import json
+import requests
 
 from .devices import Devices
+from .suites import Suites
 
 logger = logging.getLogger(__name__)
 
@@ -20,21 +21,22 @@ class TestObject(object):
 		self.username = username
 		self.api_key = api_key
 		self.devices = Devices(self)
+		self.suites = Suites(self)
 
-	def request(self, method, endpoint):
-
+	def request(self, method, endpoint, auth_type=None, data=None):
 		url = TestObject.URL_BASE + endpoint
 		logger.info("URL: %s",url)
-		http_conn = httplib2.Http()
-		http_conn.add_credentials(self.username, self.api_key)
 
-		response_info, content = http_conn.request(url, method=method)
+		content = None
 
-		#vcrpy sends requests as a bytestring and this is not allowed as a parameter on json on python 3
-		content = content.decode('utf-8') 
-		content_json = json.loads(content)
+		#Appium Suites API needs a different authentication
+		# "All endpoints in Appium Suites API require basic authentication with
+		# the API Key as the username and the password left blank."
+		if auth_type == 'suite':
+			content = requests.request(method, url, auth=(self.api_key, ''), json=data)
+		else:
+			content = requests.request(method, url, auth=(self.username, self.api_key), json=data)
 
-		logger.info("response: %s",response_info)
-		logger.debug("content: %s", content_json)
+		logger.debug("content: %s", content)
 
-		return content_json
+		return json.loads(content.text)
