@@ -67,3 +67,21 @@ def test_start_suite(to):
 
     assert response, dict
 
+# def test_stop_suite(to):
+
+#     response = to.suites.stop_suites(14, 11)
+
+#     assert response, dict
+
+# def stop_suite_test(to):
+
+#     response = to.suites.stop_suite_test(14, 11, 11)
+
+#     assert response, dict
+
+
+# def test_skip_test(to):
+
+#     response = to.suites.skip_suite_test(14, 11, 11)
+
+#     assert response, dict

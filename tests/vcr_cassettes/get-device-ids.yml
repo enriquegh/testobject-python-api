@@ -5,16 +5,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.14.2]
+      User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://app.testobject.com/api/rest/v2/appium/suites/7/deviceIds
+    uri: https://app.testobject.com/api/rest/v2/appium/suites/14/deviceIds
   response:
-    body: {string: '[{"dataCenterId":"US","dataCenterURL":"https://us1.appium.testobject.com/api/appium/wd/hub","deviceDescriptorIds":["iPhone_SE_10_2_POC101","iPhone_SE_10_2_POC108"]}]'}
+    body: {string: '[{"dataCenterId":"US","dataCenterURL":"https://us1.appium.testobject.com/api/appium/wd/hub","deviceDescriptorIds":["iPhone_SE_10_2_POC108","iPhone_SE_9_3_POC127"]}]'}
     headers:
       Connection: [close]
       Content-Security-Policy: ['frame-ancestors https://*.testobject.com']
       Content-Type: [application/json]
-      Date: ['Mon, 02 Oct 2017 02:32:07 GMT']
+      Date: ['Wed, 04 Oct 2017 22:10:47 GMT']
       Referrer-Policy: [no-referrer]
       Strict-Transport-Security: [max-age=31536000; includeSubDomains; preload]
       X-Content-Type-Options: [nosniff]
