@@ -44,7 +44,7 @@ def test_get_device(to):
 @vcr.use_cassette('tests/vcr_cassettes/get-device-ids.yml', filter_headers=['authorization'])
 def test_get_devices_ids(to):
 
-    response = to.suites.get_devices_ids(7)
+    response = to.suites.get_devices_ids(14)
 
     assert response, dict
 
@@ -54,13 +54,13 @@ def test_update_suite(to):
     data['title'] = "MY NAME CHANGING SUITE"
 
 
-    response = to.suites.update_suite(7, data)
+    response = to.suites.update_suite(14, data)
 
     assert response, dict
 
 @vcr.use_cassette('tests/vcr_cassettes/start-suite.yml', filter_headers=['authorization'])
 def test_start_suite(to):
-    report = {'className': 'TOSuiteTest', 'dataCenterId': 'US', 'methodName': 'testMethod', 'deviceId': 'iPhone_SE_10_2_POC108'}
+    report = {'className': 'TOSuiteTest', 'dataCenterId': 'US', 'methodName': 'testMethod', 'deviceId': 'iPhone_5_free'}
     data = [report]
 
     response = to.suites.start_suite(14, data)
