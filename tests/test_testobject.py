@@ -67,21 +67,23 @@ def test_start_suite(to):
 
     assert response, dict
 
-# def test_stop_suite(to):
+@vcr.use_cassette('tests/vcr_cassettes/stop-suite.yml', filter_headers=['authorization'])
+def test_stop_suite(to):
 
-#     response = to.suites.stop_suites(14, 11)
+    response = to.suites.stop_suite(14, 17)
 
-#     assert response, dict
+    assert response, dict
 
-# def stop_suite_test(to):
+@vcr.use_cassette('tests/vcr_cassettes/stop-suite-test.yml', filter_headers=['authorization'])
+def stop_suite_test(to):
 
-#     response = to.suites.stop_suite_test(14, 11, 11)
+    response = to.suites.stop_suite_test(14, 17, 63, True)
 
-#     assert response, dict
+    assert response, dict
 
+@vcr.use_cassette('tests/vcr_cassettes/skip-suite-test.yml', filter_headers=['authorization'])
+def test_skip_test(to):
 
-# def test_skip_test(to):
+    response = to.suites.skip_suite_test(14, 11, 63)
 
-#     response = to.suites.skip_suite_test(14, 11, 11)
-
-#     assert response, dict
+    assert response, dict

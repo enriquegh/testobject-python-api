@@ -1,0 +1,25 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [python-requests/2.18.4]
+    method: PUT
+    uri: https://app.testobject.com/api/rest/v2/appium/suites/14/reports/11/results/63/skip
+  response:
+    body: {string: !!python/unicode '{"message":"Oops, something went wrong."}'}
+    headers:
+      connection: [close]
+      content-security-policy: ['frame-ancestors https://*.testobject.com']
+      content-type: [application/json]
+      date: ['Wed, 04 Oct 2017 22:49:20 GMT']
+      referrer-policy: [no-referrer]
+      strict-transport-security: [max-age=31536000; includeSubDomains; preload]
+      x-content-type-options: [nosniff]
+      x-frame-options: [SAMEORIGIN]
+      x-xss-protection: [1; mode=block]
+    status: {code: 500, message: Internal Server Error}
+version: 1

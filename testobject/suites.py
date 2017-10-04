@@ -30,8 +30,6 @@ class Suites(object):
 		return content
 
 	def stop_suite(self, batch_id, batch_report_id, data=None):
-		#TODO: NOT TESTED
-
 		method = 'PUT'
 		endpoint = '/v2/appium/suites/{batch_id}/reports/{batch_report_id}/finish'.format(batch_id=batch_id, batch_report_id=batch_report_id)
 
@@ -39,8 +37,21 @@ class Suites(object):
 
 		return content
  
-	def stop_suite_test(self, batch_id, batch_report_id, test_report_id):
-		pass
+	def stop_suite_test(self, batch_id, batch_report_id, test_report_id, passed):
+		method = 'PUT'
+		endpoint = '/v2/appium/suites/{batch_id}/reports/{batch_report_id}/results/{test_report_id}/finish'.format(batch_id=batch_id, batch_report_id=batch_report_id, test_report_id=test_report_id)
+
+		data = {}
+		data['passed'] = passed
+
+		content = self.testobject.request(method, endpoint, auth_type='suite',data=data)
+
+		return content
 
 	def skip_suite_test(self, batch_id, batch_report_id, test_report_id):
-		pass
+		method = 'PUT'
+		endpoint = '/v2/appium/suites/{batch_id}/reports/{batch_report_id}/results/{test_report_id}/skip'.format(batch_id=batch_id, batch_report_id=batch_report_id, test_report_id=test_report_id)
+
+		content = self.testobject.request(method, endpoint, auth_type='suite')
+
+		return content
