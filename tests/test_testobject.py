@@ -57,3 +57,13 @@ def test_update_suite(to):
     response = to.suites.update_suite(7, data)
 
     assert response, dict
+
+@vcr.use_cassette('tests/vcr_cassettes/start-suite.yml', filter_headers=['authorization'])
+def test_start_suite(to):
+    report = {'className': 'TOSuiteTest', 'dataCenterId': 'US', 'methodName': 'testMethod', 'deviceId': 'iPhone_SE_10_2_POC108'}
+    data = [report]
+
+    response = to.suites.start_suite(14, data)
+
+    assert response, dict
+

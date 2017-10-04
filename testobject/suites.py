@@ -22,9 +22,8 @@ class Suites(object):
 		return content
 
 	def start_suite(self, batch_id, data=None):
-		#TODO: NOT TESTED
 		method = 'POST'
-		endpoint = '/v2/appium/{batch_id}/reports/start'.format(batch_id=batch_id)
+		endpoint = '/v2/appium/suites/{batch_id}/reports/start'.format(batch_id=batch_id)
 
 		content = self.testobject.request(method, endpoint, auth_type='suite', data=data)
 
@@ -32,9 +31,9 @@ class Suites(object):
 
 	def stop_suite(self, batch_id, batch_report_id, data=None):
 		#TODO: NOT TESTED
-		
+
 		method = 'PUT'
-		endpoint = '/v2/appium/{batch_id}/reports/{batch_report_id}/finish'.format(batch_id=batch_id, batch_report_id=batch_report_id)
+		endpoint = '/v2/appium/suites/{batch_id}/reports/{batch_report_id}/finish'.format(batch_id=batch_id, batch_report_id=batch_report_id)
 
 		content = self.testobject.request(method, endpoint, auth_type='suite', data=data)
 
@@ -45,9 +44,3 @@ class Suites(object):
 
 	def skip_suite_test(self, batch_id, batch_report_id, test_report_id):
 		pass
-
-
-		"""
-{className='TOSuiteTest', methodName='testMethod', deviceId='iPhone_SE_10_2_POC108', dataCenterId='US'}
-		"""
-
