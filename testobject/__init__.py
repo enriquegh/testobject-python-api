@@ -1,1 +1,1 @@
-from .testobject import TestObject
+from .client import TestObject

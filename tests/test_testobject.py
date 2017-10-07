@@ -2,7 +2,7 @@ import vcr
 import os
 import pytest
 
-from testobject import TestObject
+from testobject.client import TestObject
 
 EXPECTED_DEVICE_KEYS = set([
     'internalStorageSize', 
