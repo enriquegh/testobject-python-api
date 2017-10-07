@@ -8,6 +8,7 @@ import requests
 
 from .devices import Devices
 from .suites import Suites
+from .watcher import Watcher
 
 logger = logging.getLogger(__name__)
 
@@ -22,21 +23,27 @@ class TestObject(object):
 		self.api_key = api_key
 		self.devices = Devices(self)
 		self.suites = Suites(self)
+		self.watcher = Watcher(self)
 
 	def request(self, method, endpoint, auth_type=None, data=None):
 		url = TestObject.URL_BASE + endpoint
 		logger.info("URL: %s",url)
 
-		content = None
+		auth = None
 
 		#Appium Suites API needs a different authentication
 		# "All endpoints in Appium Suites API require basic authentication with
 		# the API Key as the username and the password left blank."
+		# Watcher API needs no authentication
 		if auth_type == 'suite':
-			content = requests.request(method, url, auth=(self.api_key, ''), json=data)
+			auth=(self.api_key, '')
+		elif auth_type == 'watcher':
+			pass
 		else:
-			content = requests.request(method, url, auth=(self.username, self.api_key), json=data)
+			auth=(self.username, self.api_key)
+
+		content = requests.request(method, url, auth=auth, json=data)
 
 		logger.debug("content: %s", content)
 
-		return json.loads(content.text)
+		return content
