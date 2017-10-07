@@ -75,7 +75,7 @@ def test_stop_suite(to):
     assert response.json(), dict
 
 @vcr.use_cassette('tests/vcr_cassettes/stop-suite-test.yml', filter_headers=['authorization'])
-def stop_suite_test(to):
+def test_stop_suite_test(to):
 
     response = to.suites.stop_suite_test(14, 17, 63, True)
 
