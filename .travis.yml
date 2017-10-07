@@ -1,8 +1,10 @@
 language: python
 python: 
   - 2.7
+  - 3.3
+  - 3.4
   - 3.5
-before_script:
-  - python -c "import ssl;print(ssl.OPENSSL_VERSION)"
 script:
-  - pytest  
+  - pytest --cov=./
+after_script:
+  - codecov
