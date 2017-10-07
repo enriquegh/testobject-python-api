@@ -8,6 +8,7 @@ import requests
 
 from .devices import Devices
 from .suites import Suites
+from .watcher import Watcher
 
 logger = logging.getLogger(__name__)
 
@@ -22,6 +23,7 @@ class TestObject(object):
 		self.api_key = api_key
 		self.devices = Devices(self)
 		self.suites = Suites(self)
+		self.watcher = Watcher(self)
 
 	def request(self, method, endpoint, auth_type=None, data=None):
 		url = TestObject.URL_BASE + endpoint

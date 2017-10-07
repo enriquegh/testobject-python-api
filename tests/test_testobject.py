@@ -87,3 +87,17 @@ def test_skip_test(to):
     response = to.suites.skip_suite_test(14, 11, 63)
 
     assert response.json(), dict
+
+@vcr.use_cassette('tests/vcr_cassettes/skip-test-report.yml', filter_headers=['authorization'])
+def test_skip_test_report(to):
+    
+    response = to.watcher.skip_test_report('95ffffe9-4eb0-418e-87d0-4f1d59fa19fe')
+
+    assert response.ok 
+
+@vcr.use_cassette('tests/vcr_cassettes/report-test-result.yml', filter_headers=['authorization'])
+def test_report_test_result(to):
+    response = to.watcher.report_test_result('95ffffe9-4eb0-418e-87d0-4f1d59fa19fe', False)
+
+    assert response.ok 
+
