@@ -4,6 +4,56 @@ import pytest
 
 from testobject import TestObject
 
+EXPECTED_DEVICE_KEYS = set([
+    'internalStorageSize', 
+    'isArm', 
+    'ramSize', 
+    'isKeyGuardDisabled', 
+    'isTablet', 
+    'defaultOrientation', 
+    'supportsXcuiTest', 
+    'resolutionWidth', 
+    'apiLevel', 
+    'id', 
+    'isAlternativeIoEnabled', 
+    'cpuFrequency', 
+    'resolutionHeight', 
+    'hasHardwareKeyboard', 
+    'supportsMockLocations', 
+    'isPrivate', 
+    'dpiName', 
+    'isRooted', 
+    'abiType', 
+    'supportsAppiumWebAppTesting', 
+    'sdCardSize', 
+    'osVersion', 
+    'manufacturer', 
+    'hasOnScreenButtons', 
+    'name', 
+    'cpuCores', 
+    'pixelsPerPoint', 
+    'modelNumber', 
+    'screenSize', 
+    'supportsManualWebTesting', 
+    'deviceFamily', 
+    'os', 
+    'dpi'
+
+])
+EXPECTED_SUITE_DEVICES_KEYS = set([
+    'dataCenterId',
+    'dataCenterURL',
+    'deviceDescriptorIds'
+
+])
+EXPECTED_SUITE_KEYS = set([
+    'id',
+    'title',
+    'appVersionId',
+    'frameworkVersion',
+    'deviceIds'
+])
+
 @pytest.fixture
 def to():
     username = os.environ.get('TO_USERNAME', None)
@@ -15,9 +65,15 @@ def to():
 def test_get_devices(to):
 
     response = to.devices.get_devices()
+    datacenters = response.json()
+
+    assert datacenters, dict
+
+    for _, datacenter in datacenters.items():
+        for device in datacenter:
+            assert EXPECTED_DEVICE_KEYS.issubset(device)
 
 
-    assert response.json(), dict
 
 
 @vcr.use_cassette('tests/vcr_cassettes/available-devices.yml', filter_headers=['authorization'])
@@ -26,7 +82,9 @@ def test_get_available_devices(to):
     response = to.devices.get_available_devices()
 
 
-    assert response.json(), dict
+    datacenters = response.json()
+
+    assert datacenters, dict
 
 
 @vcr.use_cassette('tests/vcr_cassettes/device.yml', filter_headers=['authorization'])
@@ -36,17 +94,23 @@ def test_get_device(to):
 
     response = to.devices.get_device(device_name)
 
+    datacenters = response.json()
 
-    assert response.json(), dict
-    assert response.json()['US']['id'] == device_name
+    assert datacenters, dict
+    assert datacenters['US']['id'] == device_name
+    for _, device in datacenters.items():
+        print device
+        assert EXPECTED_DEVICE_KEYS.issubset(device)
 
 
 @vcr.use_cassette('tests/vcr_cassettes/get-device-ids.yml', filter_headers=['authorization'])
 def test_get_devices_ids(to):
 
     response = to.suites.get_devices_ids(14)
-
-    assert response.json(), dict
+    content = response.json()
+    assert content, dict
+    for keys in content:
+        assert EXPECTED_SUITE_DEVICES_KEYS.issubset(keys)
 
 @vcr.use_cassette('tests/vcr_cassettes/update-suite.yml', filter_headers=['authorization'])
 def test_update_suite(to):
@@ -55,8 +119,9 @@ def test_update_suite(to):
 
 
     response = to.suites.update_suite(14, data)
-
-    assert response.json(), dict
+    content = response.json()
+    assert content, dict
+    assert EXPECTED_SUITE_KEYS.issubset(content)
 
 @vcr.use_cassette('tests/vcr_cassettes/start-suite.yml', filter_headers=['authorization'])
 def test_start_suite(to):
