@@ -27,16 +27,21 @@ class TestObject(object):
 		url = TestObject.URL_BASE + endpoint
 		logger.info("URL: %s",url)
 
-		content = None
+		auth = None
 
 		#Appium Suites API needs a different authentication
 		# "All endpoints in Appium Suites API require basic authentication with
 		# the API Key as the username and the password left blank."
+		# Watcher API needs no authentication
 		if auth_type == 'suite':
-			content = requests.request(method, url, auth=(self.api_key, ''), json=data)
+			auth=(self.api_key, '')
+		elif auth_type == 'watcher':
+			pass
 		else:
-			content = requests.request(method, url, auth=(self.username, self.api_key), json=data)
+			auth=(self.username, self.api_key)
+
+		content = requests.request(method, url, auth=auth, json=data)
 
 		logger.debug("content: %s", content)
 
-		return json.loads(content.text)
+		return content
