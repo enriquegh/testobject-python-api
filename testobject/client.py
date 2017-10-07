@@ -6,9 +6,9 @@ import yaml
 import json
 import requests
 
-from .devices import Devices
-from .suites import Suites
-from .watcher import Watcher
+from testobject.devices import Devices
+from testobject.suites import Suites
+from testobject.watcher import Watcher
 
 logger = logging.getLogger(__name__)
 
