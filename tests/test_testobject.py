@@ -120,7 +120,6 @@ def test_get_device(to):
     assert datacenters, dict
     assert datacenters['US']['id'] == device_name
     for _, device in datacenters.items():
-        print device
         assert EXPECTED_DEVICE_KEYS.issubset(device)
 
 
