@@ -54,6 +54,27 @@ EXPECTED_SUITE_KEYS = set([
     'deviceIds'
 ])
 
+EXPECTED_START_SUITE_KEYS = set([
+    'id',
+    'testReports'
+
+])
+
+EXPECTED_TEST_REPORT_KEYS = set([
+    'id',
+    'test'
+
+])
+
+EXPECTED_TEST_KEYS = set([
+    'className',
+    'methodName',
+    'deviceId',
+    'dataCenterId'
+
+])
+
+
 @pytest.fixture
 def to():
     username = os.environ.get('TO_USERNAME', None)
@@ -129,29 +150,47 @@ def test_start_suite(to):
     data = [report]
 
     response = to.suites.start_suite(14, data)
+    content = response.json()
 
-    assert response.json(), dict
+    assert content, dict
+    EXPECTED_START_SUITE_KEYS.issubset(content)
+    for tests in content['testReports']:
+        assert EXPECTED_TEST_REPORT_KEYS.issubset(tests)
+        assert EXPECTED_TEST_KEYS.issubset(tests['test'])
+
 
 @vcr.use_cassette('tests/vcr_cassettes/stop-suite.yml', filter_headers=['authorization'])
 def test_stop_suite(to):
 
     response = to.suites.stop_suite(14, 17)
+    content = response.json()
 
-    assert response.json(), dict
+    assert content, dict
+    EXPECTED_START_SUITE_KEYS.issubset(content)
+    for tests in content['testReports']:
+        assert EXPECTED_TEST_REPORT_KEYS.issubset(tests)
+        assert EXPECTED_TEST_KEYS.issubset(tests['test'])
 
 @vcr.use_cassette('tests/vcr_cassettes/stop-suite-test.yml', filter_headers=['authorization'])
 def test_stop_suite_test(to):
 
     response = to.suites.stop_suite_test(14, 17, 63, True)
+    content = response.json()
 
-    assert response.json(), dict
+    assert content, dict
+    assert EXPECTED_TEST_REPORT_KEYS.issubset(content)
+    assert EXPECTED_TEST_KEYS.issubset(content['test'])
+
 
 @vcr.use_cassette('tests/vcr_cassettes/skip-suite-test.yml', filter_headers=['authorization'])
 def test_skip_test(to):
 
     response = to.suites.skip_suite_test(14, 11, 55)
+    content = response.json()
 
-    assert response.json(), dict
+    assert content, dict
+    assert EXPECTED_TEST_REPORT_KEYS.issubset(content)
+    assert EXPECTED_TEST_KEYS.issubset(content['test'])
 
 @vcr.use_cassette('tests/vcr_cassettes/skip-test-report.yml', filter_headers=['authorization'])
 def test_skip_test_report(to):
