@@ -10,18 +10,9 @@ For more on the API you can visit TestObject's docs [here](https://api.testobjec
 
 ### Installing
 
-This package is not released on PyPi yet so for now you need to download and use manually.
-
-Clone repository
-
+To install on your machine run:
 ```bash
-git clone https://github.com/enriquegh/testobject-python-api
-```
-
-Change directory to the the root of the repo
-
-```bash
-cd testobject-python-api
+pip install testobject
 ```
 
 Once installed you can run something like:
