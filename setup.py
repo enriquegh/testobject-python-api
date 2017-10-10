@@ -8,7 +8,7 @@ except(IOError, ImportError):
 setup(
     name = 'testobject',
     packages = ['testobject'],
-    version = '0.1.0',
+    version = '0.1.1',
     description = 'Python API wrapper for TestObject',
     author = 'Enrique Gonzalez',
     author_email = 'egonzalezh94@gmail.com',
