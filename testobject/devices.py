@@ -1,31 +1,31 @@
 
 
 class Devices(object):
-	
-	def __init__(self, testobject):
-		self.testobject = testobject
 
-	def get_devices(self):
-		method = 'GET'
-		endpoint = '/v2/devices'
+    def __init__(self, testobject):
+        self.testobject = testobject
 
-		content = self.testobject.request(method, endpoint)
+    def get_devices(self):
+        method = 'GET'
+        endpoint = '/v2/devices'
 
-		return content
+        content = self.testobject.request(method, endpoint)
 
-	def get_available_devices(self):
-		method = 'GET'
-		endpoint = '/v2/devices/available'
+        return content
 
-		content = self.testobject.request(method, endpoint)
+    def get_available_devices(self):
+        method = 'GET'
+        endpoint = '/v2/devices/available'
 
-		return content
+        content = self.testobject.request(method, endpoint)
+
+        return content
 
 
-	def get_device(self, descriptor_id):
-		method = 'GET'
-		endpoint = '/v2/devices/{}'.format(descriptor_id)
+    def get_device(self, descriptor_id):
+        method = 'GET'
+        endpoint = '/v2/devices/{}'.format(descriptor_id)
 
-		content = self.testobject.request(method, endpoint)
+        content = self.testobject.request(method, endpoint)
 
-		return content
+        return content
