@@ -36,7 +36,7 @@ class Suites(object):
         content = self.testobject.request(method, endpoint, auth_type='suite', data=data)
 
         return content
- 
+
     def stop_suite_test(self, batch_id, batch_report_id, test_report_id, passed):
         method = 'PUT'
         endpoint = '/v2/appium/suites/{batch_id}/reports/{batch_report_id}/results/{test_report_id}/finish'.format(batch_id=batch_id, batch_report_id=batch_report_id, test_report_id=test_report_id)
@@ -44,7 +44,7 @@ class Suites(object):
         data = {}
         data['passed'] = passed
 
-        content = self.testobject.request(method, endpoint, auth_type='suite',data=data)
+        content = self.testobject.request(method, endpoint, auth_type='suite', data=data)
 
         return content
 

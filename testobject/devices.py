@@ -21,7 +21,6 @@ class Devices(object):
 
         return content
 
-
     def get_device(self, descriptor_id):
         method = 'GET'
         endpoint = '/v2/devices/{}'.format(descriptor_id)

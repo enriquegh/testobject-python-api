@@ -5,7 +5,6 @@ class Watcher(object):
 
     def skip_test_report(self, session_id):
         method = 'PUT'
-
         endpoint = '/v2/appium/session/{session_id}/skiptest'.format(session_id=session_id)
 
         content = self.testobject.request(method, endpoint, auth_type='watcher')
