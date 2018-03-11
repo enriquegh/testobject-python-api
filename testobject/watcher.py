@@ -11,7 +11,6 @@ class Watcher(object):
 
         return content
 
-
     def report_test_result(self, session_id, passed):
         method = 'PUT'
 
