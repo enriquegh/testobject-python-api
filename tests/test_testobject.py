@@ -95,13 +95,10 @@ def test_get_devices(to):
             assert EXPECTED_DEVICE_KEYS.issubset(device)
 
 
-
-
 @vcr.use_cassette('tests/vcr_cassettes/available-devices.yml', filter_headers=['authorization'])
 def test_get_available_devices(to):
 
     response = to.devices.get_available_devices()
-
 
     datacenters = response.json()
 
@@ -121,6 +118,12 @@ def test_get_device(to):
     assert datacenters['US']['id'] == device_name
     for _, device in datacenters.items():
         assert EXPECTED_DEVICE_KEYS.issubset(device)
+
+
+def test_session_reports(to):
+    # response = to.devices.get_session_reports()
+
+    assert True
 
 
 @vcr.use_cassette('tests/vcr_cassettes/get-device-ids.yml', filter_headers=['authorization'])
@@ -202,5 +205,4 @@ def test_skip_test_report(to):
 def test_report_test_result(to):
     response = to.watcher.report_test_result('95ffffe9-4eb0-418e-87d0-4f1d59fa19fe', False)
 
-    assert response.ok 
-
+    assert response.ok

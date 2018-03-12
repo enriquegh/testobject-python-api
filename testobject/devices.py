@@ -28,3 +28,9 @@ class Devices(object):
         content = self.testobject.request(method, endpoint)
 
         return content
+
+    def get_session_reports(self, last_days=None, offset=None, limit=None):
+        method = 'GET'
+        endpoint = '/v1/devices/reports'
+
+        content = self.testobject.request(method, endpoint)
