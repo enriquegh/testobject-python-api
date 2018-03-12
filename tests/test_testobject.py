@@ -3,6 +3,7 @@ import os
 import pytest
 
 from testobject.client import TestObject
+from testobject.client import NoPasswordException
 
 EXPECTED_DEVICE_KEYS = set([
     'internalStorageSize', 
@@ -147,13 +148,16 @@ def test_get_device(to):
 
 @vcr.use_cassette('tests/vcr_cassettes/get-session-reports.yml', filter_headers=['authorization'])
 def test_session_reports(to):
-    response = to.devices.get_session_reports()
-    reports = response.json()
+    with pytest.raises(NoPasswordException):
+        response = to.devices.get_session_reports()
+        reports = response.json()
 
-    assert reports, dict
-    assert EXPECTED_SESSION_REPORT_KEYS.issubset(reports)
-    for key in reports['entities']:
-        assert EXPECTED_SESSION_REPORT_ENTITIY_KEYS.issubset(key)
+        assert reports, dict
+        assert EXPECTED_SESSION_REPORT_KEYS.issubset(reports)
+        for key in reports['entities']:
+            assert EXPECTED_SESSION_REPORT_ENTITIY_KEYS.issubset(key)
+        to.password = None
+        response = to.devices.get_session_reports()
 
 
 @vcr.use_cassette('tests/vcr_cassettes/get-device-ids.yml', filter_headers=['authorization'])
