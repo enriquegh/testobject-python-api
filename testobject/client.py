@@ -9,19 +9,24 @@ from testobject.watcher import Watcher
 logger = logging.getLogger(__name__)
 
 
+class NoPasswordException(Exception):
+    pass
+
+
 class TestObject(object):
 
     URL_BASE = "https://app.testobject.com/api/rest"
 
-    def __init__(self, username, api_key):
+    def __init__(self, username, api_key, password=None):
 
         self.username = username
         self.api_key = api_key
+        self.password = password
         self.devices = Devices(self)
         self.suites = Suites(self)
         self.watcher = Watcher(self)
 
-    def request(self, method, endpoint, auth_type=None, data=None):
+    def request(self, method, endpoint, auth_type=None, data=None, **kwargs):
         url = TestObject.URL_BASE + endpoint
         logger.info("URL: %s", url)
 
@@ -35,10 +40,15 @@ class TestObject(object):
             auth = (self.api_key, '')
         elif auth_type == 'watcher':
             pass
+        elif auth_type == 'session_reports':
+            if self.password:
+                auth = (self.username, self.password)
+            else:
+                raise NoPasswordException
         else:
             auth = (self.username, self.api_key)
 
-        content = requests.request(method, url, auth=auth, json=data)
+        content = requests.request(method, url, auth=auth, json=data, **kwargs)
 
         logger.debug("content: %s", content)
 
