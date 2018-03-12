@@ -18,7 +18,8 @@ pip install testobject
 Once installed you can run something like:
 ```python
 import testobject
-client = testobject.TestObject('myusername','my_api_key')
+client = testobject.TestObject('myusername','my_api_key', password='password')
+# Password only needed if using Session Reports
 response = client.devices.get_devices()
 devices = response.json()
 us_devices = devices['US']
@@ -57,6 +58,13 @@ us_devices = devices['US']
 response = client.devices.get_device('iPhone_5_free')
 device = response.json()
 ```
+
+### Get Session Reports
+```python
+response = client.devices.get_session_reports(last_days=30, offset=1, limit=50)
+reports = response.json()
+```
+
 ### Update Appium Suite
 
 ```python
