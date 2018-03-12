@@ -66,6 +66,30 @@ EXPECTED_TEST_REPORT_KEYS = set([
 
 ])
 
+EXPECTED_SESSION_REPORT_KEYS = set([
+    'entities',
+    'metaData'
+])
+
+EXPECTED_SESSION_REPORT_ENTITIY_KEYS = set([
+    'id',
+    'projectId',
+    'userId',
+    'deviceDescriptorId',
+    'usage',
+    'appId',
+    'frameworkAppId',
+    'testFrameworkType',
+    'testFrameworkVersion',
+    'testReportIds',
+    'testIds',
+    'batchId',
+    'startDateTime',
+    'endDateTime',
+    'durationInSeconds'
+
+])
+
 EXPECTED_TEST_KEYS = set([
     'className',
     'methodName',
@@ -79,8 +103,9 @@ EXPECTED_TEST_KEYS = set([
 def to():
     username = os.environ.get('TO_USERNAME', None)
     api_key = os.environ.get('TO_API_KEY', None)
+    password = os.environ.get('TO_PASSWORD', None)
 
-    return TestObject(username, api_key)
+    return TestObject(username, api_key, password)
 
 @vcr.use_cassette('tests/vcr_cassettes/all-devices.yml', filter_headers=['authorization'])
 def test_get_devices(to):
@@ -120,10 +145,15 @@ def test_get_device(to):
         assert EXPECTED_DEVICE_KEYS.issubset(device)
 
 
+@vcr.use_cassette('tests/vcr_cassettes/get-session-reports.yml', filter_headers=['authorization'])
 def test_session_reports(to):
-    # response = to.devices.get_session_reports()
+    response = to.devices.get_session_reports()
+    reports = response.json()
 
-    assert True
+    assert reports, dict
+    assert EXPECTED_SESSION_REPORT_KEYS.issubset(reports)
+    for key in reports['entities']:
+        assert EXPECTED_SESSION_REPORT_ENTITIY_KEYS.issubset(key)
 
 
 @vcr.use_cassette('tests/vcr_cassettes/get-device-ids.yml', filter_headers=['authorization'])
@@ -196,10 +226,10 @@ def test_skip_test(to):
 
 @vcr.use_cassette('tests/vcr_cassettes/skip-test-report.yml', filter_headers=['authorization'])
 def test_skip_test_report(to):
-    
+
     response = to.watcher.skip_test_report('95ffffe9-4eb0-418e-87d0-4f1d59fa19fe')
 
-    assert response.ok 
+    assert response.ok
 
 @vcr.use_cassette('tests/vcr_cassettes/report-test-result.yml', filter_headers=['authorization'])
 def test_report_test_result(to):

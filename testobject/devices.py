@@ -33,4 +33,10 @@ class Devices(object):
         method = 'GET'
         endpoint = '/v1/devices/reports'
 
-        content = self.testobject.request(method, endpoint)
+        params = {'lastDays': last_days, 'offset': offset, 'limit': limit}
+
+        content = self.testobject.request(method, endpoint,
+                                          auth_type='session_reports',
+                                          params=params)
+
+        return content

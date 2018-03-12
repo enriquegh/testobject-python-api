@@ -8,6 +8,7 @@ from testobject.watcher import Watcher
 
 logger = logging.getLogger(__name__)
 
+
 class NoPasswordException(Exception):
     pass
 
@@ -39,7 +40,7 @@ class TestObject(object):
             auth = (self.api_key, '')
         elif auth_type == 'watcher':
             pass
-        elif auth_type == 'device_report':
+        elif auth_type == 'session_reports':
             if self.password:
                 auth = (self.username, self.password)
             else:
