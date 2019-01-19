@@ -6,99 +6,7 @@ import uuid
 from testobject.client import TestObject
 from testobject.client import NoPasswordException
 
-EXPECTED_DEVICE_KEYS = set([
-    'internalStorageSize', 
-    'isArm', 
-    'ramSize', 
-    'isKeyGuardDisabled', 
-    'isTablet', 
-    'defaultOrientation', 
-    'supportsXcuiTest', 
-    'resolutionWidth', 
-    'apiLevel', 
-    'id', 
-    'isAlternativeIoEnabled', 
-    'cpuFrequency', 
-    'resolutionHeight', 
-    'hasHardwareKeyboard', 
-    'supportsMockLocations', 
-    'isPrivate', 
-    'dpiName', 
-    'isRooted', 
-    'abiType', 
-    'supportsAppiumWebAppTesting', 
-    'sdCardSize', 
-    'osVersion', 
-    'manufacturer', 
-    'hasOnScreenButtons', 
-    'name', 
-    'cpuCores', 
-    'pixelsPerPoint', 
-    'modelNumber', 
-    'screenSize', 
-    'supportsManualWebTesting', 
-    'deviceFamily', 
-    'os', 
-    'dpi'
-
-])
-EXPECTED_SUITE_DEVICES_KEYS = set([
-    'dataCenterId',
-    'dataCenterURL',
-    'deviceDescriptorIds'
-
-])
-EXPECTED_SUITE_KEYS = set([
-    'id',
-    'title',
-    'appVersionId',
-    'frameworkVersion',
-    'deviceIds'
-])
-
-EXPECTED_START_SUITE_KEYS = set([
-    'id',
-    'testReports'
-
-])
-
-EXPECTED_TEST_REPORT_KEYS = set([
-    'id',
-    'test'
-
-])
-
-EXPECTED_SESSION_REPORT_KEYS = set([
-    'entities',
-    'metaData'
-])
-
-EXPECTED_SESSION_REPORT_ENTITIY_KEYS = set([
-    'id',
-    'projectId',
-    'userId',
-    'deviceDescriptorId',
-    'usage',
-    'appId',
-    'frameworkAppId',
-    'testFrameworkType',
-    'testFrameworkVersion',
-    'testReportIds',
-    'testIds',
-    'batchId',
-    'startDateTime',
-    'endDateTime',
-    'durationInSeconds'
-
-])
-
-EXPECTED_TEST_KEYS = set([
-    'className',
-    'methodName',
-    'deviceId',
-    'dataCenterId'
-
-])
+from .keys import *
 
 UPLOAD_APP_PATH = os.environ.get('UPLOAD_APP_PATH',"./README.md")
 
@@ -254,6 +162,16 @@ def test_upload_app(to):
     assert content, str
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization','App-DisplayName'])
+def test_upload_app_no_display_name(to):
+
+    response = to.storage.upload_app(UPLOAD_APP_PATH, None, False)
+
+    content = response.text
+
+    assert content, str
+    assert response.ok
+
 @vcr.use_cassette('tests/vcr_cassettes/get_test_report.yml', filter_headers=['authorization'])
 def test_get_test_report(to):
 
@@ -264,12 +182,3 @@ def test_get_test_report(to):
     assert response.ok
 
     
-@vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization','App-DisplayName'])
-def test_upload_app_no_display_name(to):
-
-    response = to.storage.upload_app(UPLOAD_APP_PATH, None, False)
-
-    content = response.text
-
-    assert content, str
-    assert response.ok
