@@ -181,6 +181,7 @@ def test_get_test_report(to):
     assert content, dict
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/get_screenshot.yml', filter_headers=['authorization'])
 def test_get_screenshot(to):
 
     response = to.reports.get_screenshot(4, 1)
