@@ -10,7 +10,7 @@ class Storage(object):
         endpoint = '/storage/upload'
 
         headers = {}
-        headers["App-Active"] = str(True)
+        headers["App-Active"] = str(is_active)
         headers["Accept"] = "text/plain"
         headers["Content-Type"] = "application/octet-stream"
 
