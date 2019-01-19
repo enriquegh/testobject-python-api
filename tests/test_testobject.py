@@ -188,3 +188,10 @@ def test_get_screenshot(to):
 
     assert response.content, bytes 
     assert response.ok
+
+def test_get_video(to):
+
+    response = to.reports.get_video('8f1aac1e-5434-47e7-bb7b-81cc89436327')
+
+    assert response.content, bytes
+    assert response.ok

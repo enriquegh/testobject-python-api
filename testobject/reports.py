@@ -20,8 +20,13 @@ class Reports(object):
         return response
 
     def get_video(self, video_id):
-        pass
-    
+        method = 'GET'
+        endpoint = '/v2/video/{video_id}.mp4'.format(video_id=video_id)
+
+        response = self.testobject.request(method, endpoint)
+
+        return response
+
     def get_appium_log(self, test_report_id):
         pass
 
