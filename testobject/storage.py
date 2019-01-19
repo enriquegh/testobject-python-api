@@ -12,13 +12,14 @@ class Storage(object):
         headers = {}
         headers["App-Active"] = str(True)
         headers["Accept"] = "text/plain"
+        headers["Content-Type"] = "application/octet-stream"
 
         if display_name:
             headers["App-DisplayName"] = display_name
         
         with open(path,'rb') as app:
             
-            content = self.testobject.request(method, endpoint, headers=headers, data=app)
+            content = self.testobject.request(method, endpoint, headers=headers, binary_file=app.read())
 
             return content
         
