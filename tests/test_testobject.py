@@ -1,6 +1,7 @@
 import vcr
 import os
 import pytest
+import uuid
 
 from testobject.client import TestObject
 from testobject.client import NoPasswordException
@@ -239,4 +240,15 @@ def test_skip_test_report(to):
 def test_report_test_result(to):
     response = to.watcher.report_test_result('95ffffe9-4eb0-418e-87d0-4f1d59fa19fe', False)
 
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization'])
+def test_upload_app(to):
+    display_name = str(uuid.uuid4())
+
+    response = to.storage.upload_app("/Users/enriquegonzalez/saucelabs/apps/Android/enrique.apk", display_name, False)
+
+    content = response.text
+
+    assert content, str
     assert response.ok
