@@ -253,3 +253,13 @@ def test_upload_app(to):
 
     assert content, str
     assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization','App-DisplayName'])
+def test_upload_app_no_display_name(to):
+
+    response = to.storage.upload_app(UPLOAD_APP_PATH, None, False)
+
+    content = response.text
+
+    assert content, str
+    assert response.ok
