@@ -181,4 +181,9 @@ def test_get_test_report(to):
     assert content, dict
     assert response.ok
 
-    
+def test_get_screenshot(to):
+
+    response = to.reports.get_screenshot(4, 1)
+
+    assert response.content, bytes 
+    assert response.ok

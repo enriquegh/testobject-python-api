@@ -12,7 +12,12 @@ class Reports(object):
         return response
     
     def get_screenshot(self, test_report_id, screenshot_id):
-        pass
+        method = 'GET'
+        endpoint = '/v2/screenshots/{test_report_id}/{screenshot_id}.png'.format(test_report_id=test_report_id, screenshot_id=screenshot_id)
+
+        response = self.testobject.request(method, endpoint)
+
+        return response
 
     def get_video(self, video_id):
         pass
