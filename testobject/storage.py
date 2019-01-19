@@ -22,5 +22,3 @@ class Storage(object):
             content = self.testobject.request(method, endpoint, headers=headers, binary_file=app.read())
 
             return content
-        
-        raise Exception
