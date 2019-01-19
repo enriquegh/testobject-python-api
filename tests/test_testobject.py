@@ -100,6 +100,7 @@ EXPECTED_TEST_KEYS = set([
 
 ])
 
+UPLOAD_APP_PATH = os.environ.get('UPLOAD_APP_PATH',"./README.md")
 
 @pytest.fixture
 def to():
@@ -246,7 +247,7 @@ def test_report_test_result(to):
 def test_upload_app(to):
     display_name = str(uuid.uuid4())
 
-    response = to.storage.upload_app("./README.md", display_name, False)
+    response = to.storage.upload_app(UPLOAD_APP_PATH, display_name, False)
 
     content = response.text
 
