@@ -254,6 +254,16 @@ def test_upload_app(to):
     assert content, str
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/get_test_report.yml', filter_headers=['authorization'])
+def test_get_test_report(to):
+
+    response = to.reports.get_test_report(4)
+    content = response.json()
+
+    assert content, dict
+    assert response.ok
+
+    
 @vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization','App-DisplayName'])
 def test_upload_app_no_display_name(to):
 

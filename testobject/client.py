@@ -6,6 +6,7 @@ from testobject.devices import Devices
 from testobject.suites import Suites
 from testobject.watcher import Watcher
 from testobject.storage import Storage
+from testobject.reports import Reports
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +28,7 @@ class TestObject(object):
         self.suites = Suites(self)
         self.watcher = Watcher(self)
         self.storage = Storage(self)
+        self.reports = Reports(self)
 
     def request(self, method, endpoint, auth_type=None, data=None, binary_file=None, **kwargs):
         url = TestObject.URL_BASE + endpoint
