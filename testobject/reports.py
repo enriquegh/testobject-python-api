@@ -11,3 +11,20 @@ class Reports(object):
 
         return response
     
+    def get_screenshot(self, test_report_id, screenshot_id):
+        pass
+
+    def get_video(self, video_id):
+        pass
+    
+    def get_appium_log(self, test_report_id):
+        pass
+
+    def get_device_log(self, test_report_id):
+        pass
+
+    def get_vitals_log(self, test_report_id):
+        pass
+
+    def get_xcuitest_log(self, test_report_id):
+        pass
