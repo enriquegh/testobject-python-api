@@ -196,3 +196,28 @@ def test_get_video(to):
 
     assert response.content, bytes
     assert response.ok
+
+def test_get_appium_log(to):
+    
+    response = to.reports.get_appium_log('4')
+    content = response.json()
+
+    assert content, list
+    assert response.ok
+
+def test_get_device_log(to):
+    
+    response = to.reports.get_appium_log('4')
+    content = response.json()
+
+    assert content, list
+    assert response.ok
+
+def test_get_vitals_log(to):
+    
+    response = to.reports.get_vitals_log('6')
+    content = response.text
+
+    assert content, str
+    assert response.ok
+

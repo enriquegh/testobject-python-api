@@ -28,13 +28,28 @@ class Reports(object):
         return response
 
     def get_appium_log(self, test_report_id):
-        pass
+        method = 'GET'
+        endpoint = '/v2/logs/{test_report_id}/appium'.format(test_report_id=test_report_id)
+        
+        response = self.testobject.request(method, endpoint)
+
+        return response
 
     def get_device_log(self, test_report_id):
-        pass
+        method = 'GET'
+        endpoint = '/v2/logs/{test_report_id}/device'.format(test_report_id=test_report_id)
+        
+        response = self.testobject.request(method, endpoint)
+
+        return response
 
     def get_vitals_log(self, test_report_id):
-        pass
+        method = 'GET'
+        endpoint = '/v2/logs/{test_report_id}/vitals'.format(test_report_id=test_report_id)
+        
+        response = self.testobject.request(method, endpoint)
+
+        return response
 
     def get_xcuitest_log(self, test_report_id):
         pass
