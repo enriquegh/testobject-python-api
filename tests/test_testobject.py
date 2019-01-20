@@ -224,3 +224,11 @@ def test_get_vitals_log(to):
     assert content, str
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/get_xcuitest_log.yml', filter_headers=['authorization'])
+def test_get_xcuitest_log(to):
+
+    response = to.reports.get_xcuitest_log('3')
+    content = response.text
+
+    assert content, list
+    assert response.ok

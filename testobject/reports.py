@@ -52,4 +52,9 @@ class Reports(object):
         return response
 
     def get_xcuitest_log(self, test_report_id):
-        pass
+        method = 'GET'
+        endpoint = '/v2/logs/{test_report_id}/xcuitest'.format(test_report_id=test_report_id)
+
+        response = self.testobject.request(method, endpoint)
+
+        return response
