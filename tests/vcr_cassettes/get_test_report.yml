@@ -1,0 +1,28 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://app.testobject.com/api/rest/v2/reports/4
+  response:
+    body: {string: '{"report":{"type":"APPIUM","projectPath":{"first":"csteam","second":"enrique-testobject-python"},"id":4,"uuid":"041037cdff464c4bab0280dbfaab3b42","batchId":-1,"batchName":"Default
+        Appium Suite","testId":-1,"testName":"Basic WDIO Test","appVersionId":6,"appVersionName":null,"startTime":1547937628921,"duration":27273,"networkSpeed":"FULL","deviceDescriptor":{"id":"Samsung_Galaxy_Note_8_real_us","name":"Samsung
+        Galaxy Note 8","modelNumber":"SM-N950U1","manufacturer":["Samsung"],"isArm":true,"hasOnScreenButtons":true,"abiType":"arm64-v8a","os":"ANDROID","osVersion":"8.0.0","apiLevel":26,"screenSize":6.3,"resolutionWidth":1440,"resolutionHeight":2960,"dpi":521,"pixelsPerPoint":1,"isTablet":false,"internalOrientation":"PORTRAIT","defaultOrientation":"PORTRAIT","ramSize":6144,"internalStorageSize":65536,"sdCardSize":0,"cpuCores":8,"cpuFrequency":1900,"supportsMockLocations":true,"supportsAppiumWebAppTesting":true,"isKeyGuardDisabled":false,"isRooted":false,"isPrivate":false,"supportsGlobalProxy":true,"supportsMinicapSocketConnection":false,"disableMtp":false,"deviceFamily":"ANY","cpuType":"ARM","supportsManualWebTesting":true,"supportsXcuiTest":true,"supportsQualityReport":true,"dpiName":"xxhdpi","isAlternativeIoEnabled":true,"supportsMultiTouch":true},"videoId":"8f1aac1e-5434-47e7-bb7b-81cc89436327","running":false,"systemError":null,"testResultStatus":"UNDEFINED","dataCenterId":"US","tunnelIdentifier":null,"tunnelId":null,"remoteAppFileUrl":null,"phoneNumber":null,"sharedLinkCode":null,"className":null,"sessionId":"86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e","vitalsLogRecordingEnabled":false,"type":"APPIUM","optionalSharedId":{"present":false},"status":"UNKNOWN","automationBackend":"APPIUM","withSystemError":false,"systemErrorType":null,"hasWdaLogs":false},"deviceContextId":null,"testResult":"https://app.testobject.com/#/csteam/enrique-testobject-python/appium/executions/4","screenshots":[{"id":"1","url":"https://app.testobject.com/api/rest/v2/screenshots/4/1.png"},{"id":"2","url":"https://app.testobject.com/api/rest/v2/screenshots/4/2.png"}],"video":{"id":"8f1aac1e-5434-47e7-bb7b-81cc89436327","url":"https://app.testobject.com/api/rest/v2/video/8f1aac1e-5434-47e7-bb7b-81cc89436327.mp4"},"deviceLog":"https://app.testobject.com/api/rest/v2/logs/4/device","frameworkLog":"https://app.testobject.com/api/rest/v2/logs/4/appium","vitalsLog":null}'}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['frame-ancestors https://*.testobject.com']
+      Content-Type: [application/json]
+      Date: ['Sat, 19 Jan 2019 23:07:13 GMT']
+      Expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
+      Referrer-Policy: [no-referrer]
+      Set-Cookie: [JSESSIONID=eu_app1~eu_app1oxr55w4n2smlgzs4l8ppmwjx15582.eu_app1;Path=/api;Domain=.app.testobject.com]
+      Strict-Transport-Security: [max-age=31536000; includeSubDomains; preload]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1

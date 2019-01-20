@@ -1,0 +1,391 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://app.testobject.com/api/rest/v2/logs/4/appium
+  response:
+    body: {string: '[{"id":1,"time":"22:40:29","level":"VERBOSE","message":"[HTTP]
+        --> POST \/wd\/hub\/session"},{"id":2,"time":"22:40:29","level":"VERBOSE","message":"[HTTP]
+        {\"desiredCapabilities\":{\"appPackage\":\"com.example.egonzalezh94.testproject\",\"rotatable\":true,\"testobject_platform_name\":\"Android\",\"testobject_test_name\":\"Basic
+        WDIO Test\",\"handlesAlerts\":true,\"deviceName\":\"Samsung_Galaxy_Note_8_real_us\",\"requestOrigins\":{\"url\":\"http:\/\/webdriver.io\",\"version\":\"4.13.2\",\"name\":\"webdriverio\"},\"appActivity\":\"com.example.egonzalezh94.testproject.LoginActivity\",\"locationContextEnabled\":true,\"automationName\":\"UiAutomator2\",\"javascriptEnabled\":true,\"testobject_api_key\":\"0F5E05AD42D643708E04EAFBB3D26310\",\"platformName\":\"Android\"}}"},{"id":3,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Calling AppiumDriver.createSession() with args: [{\"appPackage\":\"com.example.egonzalezh94.testproject\",\"rotatable\":true,\"testobject_platform_name\":\"Android\",\"testobject_test_name\":\"Basic
+        WDIO Test\",\"handlesAlerts\":true,\"deviceName\":\"Samsung_Galaxy_Note_8_real_us\",\"requestOrigins\":{\"url\":\"http:\/\/webdriver.io\",\"version\":\"4.13.2\",\"name\":\"webdriverio\"},\"appActivity\":\"com.example.egonzalezh94.testproject.LoginActivity\",\"locationContextEnabled\":true,\"automationName\":\"UiAutomator2\",\"javascriptEnabled\":true,\"testobject_api_key\":\"0F5E05AD42D643708E04EAFBB3D26310\",\"platformName\":\"Android\"},null,null]"},{"id":4,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [BaseDriver] Event ''newSessionRequested'' logged at 1547937629118 (22:40:29
+        GMT+0000 (UTC))"},{"id":5,"time":"22:40:29","level":"VERBOSE","message":"[Appium]
+        Creating new AndroidUiautomator2Driver (v1.12.0) session"},{"id":6,"time":"22:40:29","level":"VERBOSE","message":"[Appium]
+        Capabilities:"},{"id":7,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   suppressKillServer:
+        true"},{"id":8,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   chromedriverChromeMappingFile:
+        \/root\/.testobject_devices\/work\/chromedriver-mapping.json"},{"id":9,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   adbPort:
+        15007"},{"id":10,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   chromedriverExecutableDir:
+        \/root\/.testobject_devices\/work\/chromedrivers"},{"id":11,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   systemPort:
+        8207"},{"id":12,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   appPackage:
+        com.example.egonzalezh94.testproject"},{"id":13,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   rotatable:
+        true"},{"id":14,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   testobject_platform_name:
+        Android"},{"id":15,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   testobject_test_name:
+        Basic WDIO Test"},{"id":16,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   handlesAlerts:
+        true"},{"id":17,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   deviceName:
+        Samsung_Galaxy_Note_8_real_us"},{"id":18,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   requestOrigins:
+        {"},{"id":19,"time":"22:40:29","level":"VERBOSE","message":"[Appium]     url:
+        http:\/\/webdriver.io"},{"id":20,"time":"22:40:29","level":"VERBOSE","message":"[Appium]     version:
+        4.13.2"},{"id":21,"time":"22:40:29","level":"VERBOSE","message":"[Appium]     name:
+        webdriverio"},{"id":22,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   }"},{"id":23,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   appActivity:
+        com.example.egonzalezh94.testproject.LoginActivity"},{"id":24,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   locationContextEnabled:
+        true"},{"id":25,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   automationName:
+        UiAutomator2"},{"id":26,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   javascriptEnabled:
+        true"},{"id":27,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   testobject_api_key:
+        0F5E05AD42D643708E04EAFBB3D26310"},{"id":28,"time":"22:40:29","level":"VERBOSE","message":"[Appium]   platformName:
+        Android"},{"id":29,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [BaseDriver] Creating session with MJSONWP desired capabilities: {\"suppressKillServer\":true,..."},{"id":30,"time":"22:40:29","level":"VERBOSE","message":"[BaseDriver]
+        The following capabilities were provided, but are not recognized by appium:
+        suppressKillServer, rotatable, testobject_platform_name, testobject_test_name,
+        handlesAlerts, requestOrigins, locationContextEnabled, javascriptEnabled,
+        testobject_api_key."},{"id":31,"time":"22:40:29","level":"VERBOSE","message":"[BaseDriver]
+        Session created with session id: 86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e"},{"id":32,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [AndroidDriver] Getting Java version"},{"id":33,"time":"22:40:29","level":"VERBOSE","message":"[AndroidDriver]
+        Java version is: 1.8.0_191"},{"id":34,"time":"22:40:29","level":"VERBOSE","message":"[ADB]
+        Checking whether adb is present"},{"id":35,"time":"22:40:29","level":"VERBOSE","message":"[ADB]
+        Found 1 ''build-tools'' folders under ''\/opt\/android-sdk-linux'' (newest
+        first):"},{"id":36,"time":"22:40:29","level":"VERBOSE","message":"[ADB]     \/opt\/android-sdk-linux\/build-tools\/28.0.3"},{"id":37,"time":"22:40:29","level":"VERBOSE","message":"[ADB]
+        Using adb from \/opt\/android-sdk-linux\/platform-tools\/adb"},{"id":38,"time":"22:40:29","level":"VERBOSE","message":"[AndroidDriver]
+        Retrieving device list"},{"id":39,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Trying to find a connected android device"},{"id":40,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Getting connected devices..."},{"id":41,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] 1 device(s) connected"},{"id":42,"time":"22:40:29","level":"VERBOSE","message":"[AndroidDriver]
+        Using device: ce081718a128d525047e"},{"id":43,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Setting device id to ce081718a128d525047e"},{"id":44,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell getprop ro.build.version.sdk''"},{"id":45,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Current device property ''ro.build.version.sdk'': 26"},{"id":46,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":47,"time":"22:40:29","level":"VERBOSE","message":"[AndroidDriver]
+        No app sent in, not parsing package\/activity"},{"id":48,"time":"22:40:29","level":"VERBOSE","message":"[ADB]
+        Getting device platform version"},{"id":49,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell getprop ro.build.version.release''"},{"id":50,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Current device property ''ro.build.version.release'': 8.0.0"},{"id":51,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell wm size''"},{"id":52,"time":"22:40:29","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell wm density''"},{"id":53,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell getprop ro.product.model''"},{"id":54,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Current device property ''ro.product.model'': SM-N950U1"},{"id":55,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell getprop ro.product.manufacturer''"},{"id":56,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Current device property ''ro.product.manufacturer'': samsung"},{"id":57,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":58,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am force-stop io.appium.uiautomator2.server''"},{"id":59,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Checking app cert for \/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-v1.12.0.apk"},{"id":60,"time":"22:40:30","level":"VERBOSE","message":"[ADB]
+        Using apksigner from \/opt\/android-sdk-linux\/build-tools\/28.0.3\/apksigner"},{"id":61,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Starting ''\/opt\/android-sdk-linux\/build-tools\/28.0.3\/apksigner''
+        with args ''verify,--print-certs,\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-v1.12.0.apk''"},{"id":62,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-v1.12.0.apk''
+        is already signed."},{"id":63,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Checking app cert for \/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-debug-androidTest.apk"},{"id":64,"time":"22:40:30","level":"VERBOSE","message":"[debug]
+        [ADB] Starting ''\/opt\/android-sdk-linux\/build-tools\/28.0.3\/apksigner''
+        with args ''verify,--print-certs,\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-debug-androidTest.apk''"},{"id":65,"time":"22:40:31","level":"VERBOSE","message":"[debug]
+        [ADB] ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-debug-androidTest.apk''
+        is already signed."},{"id":66,"time":"22:40:31","level":"VERBOSE","message":"[debug]
+        [ADB] Getting install status for io.appium.uiautomator2.server"},{"id":67,"time":"22:40:31","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list packages io.appium.uiautomator2.server''"},{"id":68,"time":"22:40:31","level":"VERBOSE","message":"[debug]
+        [ADB] App is not installed"},{"id":69,"time":"22:40:31","level":"VERBOSE","message":"[debug]
+        [ADB] App ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-v1.12.0.apk''
+        not installed. Installing"},{"id":70,"time":"22:40:31","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e install \/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-v1.12.0.apk''"},{"id":71,"time":"22:40:33","level":"VERBOSE","message":"[debug]
+        [ADB] Install command stdout: Success"},{"id":72,"time":"22:40:33","level":"VERBOSE","message":"[debug]
+        [ADB] Getting install status for io.appium.uiautomator2.server.test"},{"id":73,"time":"22:40:33","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list packages io.appium.uiautomator2.server.test''"},{"id":74,"time":"22:40:34","level":"VERBOSE","message":"[debug]
+        [ADB] App is not installed"},{"id":75,"time":"22:40:34","level":"VERBOSE","message":"[debug]
+        [ADB] App ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-debug-androidTest.apk''
+        not installed. Installing"},{"id":76,"time":"22:40:34","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e install \/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-debug-androidTest.apk''"},{"id":77,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [ADB] Install command stdout: Success"},{"id":78,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [UiAutomator2] Waiting up to 20000ms for instrumentation ''io.appium.uiautomator2.server.test\/android.support.test.runner.AndroidJUnitRunner''
+        to be available"},{"id":79,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list instrumentation''"},{"id":80,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [UiAutomator2] Instrumentation ''io.appium.uiautomator2.server.test\/android.support.test.runner.AndroidJUnitRunner''
+        available"},{"id":81,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e wait-for-device''"},{"id":82,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell echo ping''"},{"id":83,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [AndroidDriver] Pushing settings apk to device..."},{"id":84,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [ADB] Getting install status for io.appium.settings"},{"id":85,"time":"22:40:36","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list packages io.appium.settings''"},{"id":86,"time":"22:40:37","level":"VERBOSE","message":"[debug]
+        [ADB] App is not installed"},{"id":87,"time":"22:40:37","level":"VERBOSE","message":"[debug]
+        [ADB] App ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/io.appium.settings\/app\/build\/outputs\/apk\/settings_apk-debug.apk''
+        not installed. Installing"},{"id":88,"time":"22:40:37","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":89,"time":"22:40:37","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e install -g \/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/io.appium.settings\/app\/build\/outputs\/apk\/settings_apk-debug.apk''"},{"id":90,"time":"22:40:38","level":"VERBOSE","message":"[debug]
+        [ADB] Install command stdout: Success"},{"id":91,"time":"22:40:38","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell ps''"},{"id":92,"time":"22:40:38","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":93,"time":"22:40:38","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am start -W -n io.appium.settings\/.Settings -a
+        android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000''"},{"id":94,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":95,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell appops set io.appium.settings android\\:mock_location
+        allow''"},{"id":96,"time":"22:40:39","level":"VERBOSE","message":"[AndroidDriver]
+        setDeviceLanguageCountry requires language or country."},{"id":97,"time":"22:40:39","level":"VERBOSE","message":"[AndroidDriver]
+        Got language: ''null'' and country: ''null''"},{"id":98,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [Logcat] Starting logcat capture"},{"id":99,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [AndroidDriver] Pushing unlock helper app to device..."},{"id":100,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] Getting install status for io.appium.unlock"},{"id":101,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list packages io.appium.unlock''"},{"id":102,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] App is not installed"},{"id":103,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] App ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-unlock\/bin\/unlock_apk-debug.apk''
+        not installed. Installing"},{"id":104,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":105,"time":"22:40:39","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e install -g \/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-unlock\/bin\/unlock_apk-debug.apk''"},{"id":106,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [ADB] Install command stdout: Success"},{"id":107,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [UiAutomator2] Forwarding UiAutomator2 Server port 6790 to 8207"},{"id":108,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [ADB] Forwarding system: 8207 to device: 6790"},{"id":109,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e forward tcp\\:8207 tcp\\:6790''"},{"id":110,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell rm -rf \/data\/local\/tmp\/strings.json''"},{"id":111,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [UiAutomator2] No app capability. Assuming it is already on the device"},{"id":112,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [ADB] Getting install status for com.example.egonzalezh94.testproject"},{"id":113,"time":"22:40:40","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list packages com.example.egonzalezh94.testproject''"},{"id":114,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [ADB] App is installed"},{"id":115,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am force-stop com.example.egonzalezh94.testproject''"},{"id":116,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm clear com.example.egonzalezh94.testproject''"},{"id":117,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [AndroidDriver] Performed fast reset on the installed ''com.example.egonzalezh94.testproject''
+        application (stop and clear)"},{"id":118,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [ADB] Checking app cert for null"},{"id":119,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [ADB] ''null'' doesn''t exist"},{"id":120,"time":"22:40:41","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am force-stop io.appium.uiautomator2.server''"},{"id":121,"time":"22:40:42","level":"VERBOSE","message":"[UiAutomator2]
+        Starting uiautomator2 server 1.12.0"},{"id":122,"time":"22:40:42","level":"VERBOSE","message":"[UiAutomator2]
+        Using UIAutomator2 server from ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-v1.12.0.apk''
+        and test from ''\/root\/appium\/appium\/1.8.1\/node_modules\/appium\/node_modules\/appium-uiautomator2-server\/apks\/appium-uiautomator2-server-debug-androidTest.apk''"},{"id":123,"time":"22:40:42","level":"VERBOSE","message":"[UiAutomator2]
+        Running command: ''adb -s ce081718a128d525047e shell am instrument -w io.appium.uiautomator2.server.test\/android.support.test.runner.AndroidJUnitRunner''"},{"id":124,"time":"22:40:42","level":"VERBOSE","message":"[UiAutomator2]
+        Waiting up to 20000ms for UiAutomator2 to be online..."},{"id":125,"time":"22:40:42","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/status] to [GET http:\/\/localhost:8207\/wd\/hub\/status]
+        with no body"},{"id":126,"time":"22:40:43","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/status] to [GET http:\/\/localhost:8207\/wd\/hub\/status]
+        with no body"},{"id":127,"time":"22:40:44","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/status] to [GET http:\/\/localhost:8207\/wd\/hub\/status]
+        with no body"},{"id":128,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/status] to [GET http:\/\/localhost:8207\/wd\/hub\/status]
+        with no body"},{"id":129,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"SESSIONID\\\",\\\"status\\\":0,\\\"value\\\":\\\"Status
+        Invoked\\\"}\""},{"id":130,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [POST \/session] to [POST http:\/\/localhost:8207\/wd\/hub\/session]
+        with body: {\"desiredCapabilities\":{\"platform\":\"LINUX\",\"webStorageEnabled\":false,\"takesScreenshot\":true,\"javascriptEnabled\":true,\"databaseEnabled\":false,\"networkConnectionEnabled\":true,\"locationContextEnabled\":true,\"warnings\":{},\"desired\":{\"suppressKillServer\":true,\"chromedriverChromeMappingFile\":\"\/root\/.testobject_devices\/work\/chromedriver-mapping.json\",\"adbPort\":15007,\"chromedriverExecutableDir\":\"\/root\/.testobject_devices\/work\/chromedrivers\",\"systemPort\":8207,\"appPackage\":\"com.example.egonzalezh94.testproject\",\"rotatable\":true,\"testobject_platform_name\":\"Android\",\"testobject_test_name\":\"Basic
+        WDIO Test\",\"handlesAlerts\":true,\"deviceName\":\"Samsung_Galaxy_Note_8_real_us\",\"requestOrigins\":{\"url\":\"http:\/\/webdriver.io\",\"version\":\"4.13.2\",\"name\":\"webdriverio\"},\"appActivity\":\"com.example.egonzalezh94.testproject.LoginActivity\",\"locationContextEnabled\":true,\"automationName\":\"UiAutomator2\",\"javascriptEnabled\":true,\"testobject_api_key\":\"0F5E05AD42D643708E04EAFBB3D26310\",\"platformName\":\"Android\"},\"suppressKillServer\":true,\"chro..."},{"id":131,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: {\"sessionId\":\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\",\"status\":0,\"value\":\"Created
+        Session\"}"},{"id":132,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell dumpsys window''"},{"id":133,"time":"22:40:45","level":"VERBOSE","message":"[AndroidDriver]
+        Screen already unlocked, doing nothing"},{"id":134,"time":"22:40:45","level":"VERBOSE","message":"[UiAutomator2]
+        UiAutomator2 did not start the activity we were waiting for, ''com.example.egonzalezh94.testproject\/com.example.egonzalezh94.testproject.LoginActivity''.
+        Starting it ourselves"},{"id":135,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":136,"time":"22:40:45","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am start -W -n com.example.egonzalezh94.testproject\/com.example.egonzalezh94.testproject.LoginActivity
+        -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000''"},{"id":137,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/appium\/device\/pixel_ratio] to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/appium\/device\/pixel_ratio]
+        with body: {}"},{"id":138,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":3.5}\""},{"id":139,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/appium\/device\/system_bars] to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/appium\/device\/system_bars]
+        with body: {}"},{"id":140,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":{\\\"statusBar\\\":84}}\""},{"id":141,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/window\/current\/size] to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/window\/current\/size]
+        with body: {}"},{"id":142,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":{\\\"height\\\":2792,\\\"width\\\":1440}}\""},{"id":143,"time":"22:40:46","level":"VERBOSE","message":"[Appium]
+        New AndroidUiautomator2Driver session created successfully, session 86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e
+        added to master session list"},{"id":144,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [BaseDriver] Event ''newSessionStarted'' logged at 1547937646315 (22:40:46
+        GMT+0000 (UTC))"},{"id":145,"time":"22:40:46","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Responding to client with driver.createSession() result: {\"platform\":\"LINUX\",\"webStorageEnabled\":false,\"takesScreenshot\":true,\"javascriptEnabled\":true,\"databaseEnabled\":false,\"networkConnectionEnabled\":true,\"locationContextEnabled\":true,\"warnings\":{},\"desired\":{\"suppressKillServer\":true,\"chromedriverChromeMappingFile\":\"\/root\/.testobject_devices\/work\/chromedriver-mapping.json\",\"adbPort\":15007,\"chromedriverExecutableDir\":\"\/root\/.testobject_devices\/work\/chromedrivers\",\"systemPort\":8207,\"appPackage\":\"com.example.egonzalezh94.testproject\",\"rotatable\":true,\"testobject_platform_name\":\"Android\",\"testobject_test_name\":\"Basic
+        WDIO Test\",\"handlesAlerts\":true,\"deviceName\":\"Samsung_Galaxy_Note_8_real_us\",\"requestOrigins\":{\"url\":\"http:\/\/webdriver.io\",\"version\":\"4.13.2\",\"name\":\"webdriverio\"},\"appActivity\":\"com.example.egonzalezh94.testproject.LoginActivity\",\"locationContextEnabled\":true,\"automationName\":\"UiAutomator2\",\"javascriptEnabled\":true,\"testobject_api_key\":\"0F5E05AD42D643708E04EAFBB3D26310\",\"platformName\":\"Android\"},\"suppressKillServer\":true,\"chromedriverChromeMappingFi..."},{"id":146,"time":"22:40:46","level":"VERBOSE","message":"[HTTP]
+        <-- POST \/wd\/hub\/session 200 17201 ms - 2030"},{"id":147,"time":"22:40:46","level":"VERBOSE","message":"[HTTP]
+        "},{"id":148,"time":"22:40:47","level":"VERBOSE","message":"[HTTP] --> GET
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source"},{"id":149,"time":"22:40:47","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":150,"time":"22:40:47","level":"VERBOSE","message":"[MJSONWP] Driver
+        proxy active, passing request on via HTTP proxy"},{"id":151,"time":"22:40:47","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source]
+        to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/source]
+        with body: {}"},{"id":152,"time":"22:40:47","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":\\\"<?xml
+        version=\\\\\\\"1.0\\\\\\\" encoding=\\\\\\\"UTF-8\\\\\\\"?><hierarchy rotation=\\\\\\\"0\\\\\\\"><android.widget.FrameLayout
+        index=\\\\\\\"0\\\\\\\" text=\\\\\\\"\\\\\\\" class=\\\\\\\"android.widget.FrameLayout\\\\\\\"
+        package=\\\\\\\"com.example.egonzalezh94.testproject\\\\\\\" content-desc=\\\\\\\"\\\\\\\"
+        checkable=\\\\\\\"false\\\\\\\" checked=\\\\\\\"false\\\\\\\" clickable=\\\\\\\"false\\\\\\\"
+        enabled=\\\\\\\"true\\\\\\\" focusable=\\\\\\\"false\\\\\\\" focused=\\\\\\\"false\\\\\\\"
+        scrollable=\\\\\\\"false\\\\\\\" long-clickable=\\\\\\\"false\\\\\\\" password=\\\\\\\"false\\\\\\\"
+        selected=\\\\\\\"false\\\\\\\" bounds=\\\\\\\"[0,0][1440,2678]\\\\\\\" resource-id=\\\\\\\"\\\\\\\"
+        instance=\\\\\\\"0\\\\\\\"><android.widget.LinearLayout index=\\\\\\\"0\\\\\\\"
+        text=\\\\\\\"\\\\\\\" class=\\\\\\\"android.widget.LinearLayout\\\\\\\" package=\\\\\\\"com.example.egonzalezh94.testproject\\\\\\\"
+        content-desc=\\\\\\\"\\\\\\\" checkable=\\\\\\\"false\\\\\\\" checked=\\\\\\\"false\\\\\\\"
+        clickable=\\\\\\\"false\\\\\\\" enabled=\\\\\\\"true\\\\\\\" focusable=\\\\\\\"false\\\\\\\"
+        focused=\\\\\\\"false\\\\\\\" scrollable=\\\\\\\"false\\\\\\\" long-clickable=\\\\\\\"false\\\\\\\"
+        password=..."},{"id":153,"time":"22:40:47","level":"VERBOSE","message":"[JSONWP
+        Proxy] Replacing sessionId 4b5f2ff0-4534-4995-be0d-67f7c00c3ce7 with 86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e"},{"id":154,"time":"22:40:47","level":"VERBOSE","message":"[HTTP]
+        <-- GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source 200
+        318 ms - 7900"},{"id":155,"time":"22:40:47","level":"VERBOSE","message":"[HTTP]
+        "},{"id":156,"time":"22:40:48","level":"VERBOSE","message":"[HTTP] --> GET
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/screenshot"},{"id":157,"time":"22:40:48","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":158,"time":"22:40:48","level":"VERBOSE","message":"[debug] [MJSONWP]
+        Calling AppiumDriver.getScreenshot() with args: [\"86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\"]"},{"id":159,"time":"22:40:48","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/screenshot] to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/screenshot]
+        with no body"},{"id":160,"time":"22:40:48","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":\\\"iVBORw0KGgoAAAANSUhEUgAABaAAAAuQCAIAAABzhw9vAAAAA3NCSVQICAjb4U\\\\\/gAAAgAElEQVR4\\\\nnOzdd3wT9\\\\\/0\\\\\/8M9py\\\\\/Lee+E9scELMMPY7J0AWSQhJM1q05l+mzZt82uzm7RpmjRN0jQhaZpJEiCE\\\\nvYcxw4AH2AwvvKc8ZGvf748DIUsnWZYlG8mv54M\\\\\/5LvTR2dzBt1Ln8\\\\\/7TXmve5kAAAAAAAAAADgy\\\\nzkSfAAAAAAAAAADAWCHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA\\\\n4SHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACH\\\\nh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACHh4ADAAAAAAAAABwe\\\\nAg4AAAAAAAAAcHgIOAAAAAAAAADA4fEm+gSAdGcWTvQpGPIu3TfRpwAAAAAAAAAwCpjBAQAAAAAA\\\\nAAAODzM4AAAAAMDZpET4E0IiAzwlIoFuY12bVCZXtvfK2qWyiTu18SARCWiaHlSoJvpEYExSIvyT\\\\nI\\\\\/zNHFBZ315R3z5u5wNw+3P+gIOiCI\\\\\/D4XBsPFdFq9WqtVqatu2oToLH5XA5FCGUFc\\\\\/VarUqjdbm\\\\npwQAAADOLSrQKzncLzUyICXCXyLij3h8TWtPZX17RX1HRX27TK4chzMcNx4S4f+7b96LXxxFwOHQ\\\\ncuJDn1k3a8TDXvryWEl14zicD4BDcPKAg8\\\\\/lTI8NLsqcEhXgxeVYc7\\\\\/NSqXRVjd27jpztayuzVZj\\\\nOgeKIpEBXkumx6ZGBbgIRn110YRcbOh4f9fZ7v4he5weAAAA..."},{"id":161,"time":"22:40:49","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Responding to client with driver.getScreenshot() result: \"iVBORw0KGgoAAAANSUhEUgAABaAAAAuQCAIAAABzhw9vAAAAA3NCSVQICAjb4U\/gAAAgAElEQVR4\\nnOzdd3wT9\/0\/8M9py\/Lee+E9scELMMPY7J0AWSQhJM1q05l+mzZt82uzm7RpmjRN0jQhaZpJEiCE\\nvYcxw4AH2AwvvKc8ZGvf748DIUsnWZYlG8mv54M\/5LvTR2dzBt1Ln8\/7TXmve5kAAAAAAAAAADgy\\nzkSfAAAAAAAAAADAWCHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA\\n4SHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACH\\nh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACHh4ADAAAAAAAAABwe\\nAg4AAAAAAAAAcHgIOAAAAAAAAADA4fEm+gSAdGcWTvQpGPIu3TfRpwAAAAAAAAAwCpjBAQAAAAAA\\nAAAODzM4AAAAAMDZpET4E0IiAzwlIoFuY12bVCZXtvfK2qWyiTu18SARCWiaHlSoJvpEYExSIvyT\\nI\/zNHFBZ315R3z5u5wNw+3P+gIOiCI\/D4XBsPFdFq9WqtVqatu2oToLH5XA5FCGUFc\/VarUqjdbm\\npwQAAADOLSrQKzncLzUyICXCXyLij3h8TWtPZX17RX1HRX27TK4chzMcNx4S4f+7b96LXxxFwOHQ\\ncuJDn1k3a8TDXvryWEl14zicD4BDcPKAg8\/lTI8NLsqcEhXgxeVYc7\/NSqXRVjd27jpztayuzVZj\\nOgeKIpEBXkumx6ZGBbgIRn110YRcbOh4f9fZ7v4he5weAAAAOBl\/T8ny7Ljs+NAAT8monhgd6BUd\\n6LU8J54QUlLddLKq8dTlJidIOjwkwpceLAz2dpvoE4GxKkiPsvAwBBwAOs4ccFAUmTol6PGlWe4u\\nQpsPnp..."},{"id":162,"time":"22:40:49","level":"VERBOSE","message":"[HTTP]
+        <-- GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/screenshot
+        200 725 ms - 175284"},{"id":163,"time":"22:40:49","level":"VERBOSE","message":"[HTTP]
+        "},{"id":164,"time":"22:40:49","level":"VERBOSE","message":"[HTTP] --> GET
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source"},{"id":165,"time":"22:40:49","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":166,"time":"22:40:49","level":"VERBOSE","message":"[MJSONWP] Driver
+        proxy active, passing request on via HTTP proxy"},{"id":167,"time":"22:40:49","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source]
+        to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/source]
+        with body: {}"},{"id":168,"time":"22:40:49","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":\\\"<?xml
+        version=\\\\\\\"1.0\\\\\\\" encoding=\\\\\\\"UTF-8\\\\\\\"?><hierarchy rotation=\\\\\\\"0\\\\\\\"><android.widget.FrameLayout
+        index=\\\\\\\"0\\\\\\\" text=\\\\\\\"\\\\\\\" class=\\\\\\\"android.widget.FrameLayout\\\\\\\"
+        package=\\\\\\\"com.example.egonzalezh94.testproject\\\\\\\" content-desc=\\\\\\\"\\\\\\\"
+        checkable=\\\\\\\"false\\\\\\\" checked=\\\\\\\"false\\\\\\\" clickable=\\\\\\\"false\\\\\\\"
+        enabled=\\\\\\\"true\\\\\\\" focusable=\\\\\\\"false\\\\\\\" focused=\\\\\\\"false\\\\\\\"
+        scrollable=\\\\\\\"false\\\\\\\" long-clickable=\\\\\\\"false\\\\\\\" password=\\\\\\\"false\\\\\\\"
+        selected=\\\\\\\"false\\\\\\\" bounds=\\\\\\\"[0,0][1440,2678]\\\\\\\" resource-id=\\\\\\\"\\\\\\\"
+        instance=\\\\\\\"0\\\\\\\"><android.widget.LinearLayout index=\\\\\\\"0\\\\\\\"
+        text=\\\\\\\"\\\\\\\" class=\\\\\\\"android.widget.LinearLayout\\\\\\\" package=\\\\\\\"com.example.egonzalezh94.testproject\\\\\\\"
+        content-desc=\\\\\\\"\\\\\\\" checkable=\\\\\\\"false\\\\\\\" checked=\\\\\\\"false\\\\\\\"
+        clickable=\\\\\\\"false\\\\\\\" enabled=\\\\\\\"true\\\\\\\" focusable=\\\\\\\"false\\\\\\\"
+        focused=\\\\\\\"false\\\\\\\" scrollable=\\\\\\\"false\\\\\\\" long-clickable=\\\\\\\"false\\\\\\\"
+        password=..."},{"id":169,"time":"22:40:49","level":"VERBOSE","message":"[JSONWP
+        Proxy] Replacing sessionId 4b5f2ff0-4534-4995-be0d-67f7c00c3ce7 with 86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e"},{"id":170,"time":"22:40:49","level":"VERBOSE","message":"[HTTP]
+        <-- GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source 200
+        152 ms - 7900"},{"id":171,"time":"22:40:49","level":"VERBOSE","message":"[HTTP]
+        "},{"id":172,"time":"22:40:50","level":"VERBOSE","message":"[HTTP] --> GET
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/screenshot"},{"id":173,"time":"22:40:50","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":174,"time":"22:40:50","level":"VERBOSE","message":"[debug] [MJSONWP]
+        Calling AppiumDriver.getScreenshot() with args: [\"86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\"]"},{"id":175,"time":"22:40:50","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/screenshot] to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/screenshot]
+        with no body"},{"id":176,"time":"22:40:50","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":\\\"iVBORw0KGgoAAAANSUhEUgAABaAAAAuQCAIAAABzhw9vAAAAA3NCSVQICAjb4U\\\\\/gAAAgAElEQVR4\\\\nnOzdd3wT9\\\\\/0\\\\\/8M9py\\\\\/Lee+E9scELMMPY7J0AWSQhJM1q05l+mzZt82uzm7RpmjRN0jQhaZpJEiCE\\\\nvYcxw4AH2AwvvKc8ZGvf748DIUsnWZYlG8mv54M\\\\\/5LvTR2dzBt1Ln8\\\\\/7TXmve5kAAAAAAAAAADgy\\\\nzkSfAAAAAAAAAADAWCHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA\\\\n4SHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACH\\\\nh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACHh4ADAAAAAAAAABwe\\\\nAg4AAAAAAAAAcHgIOAAAAAAAAADA4fEm+gSAdGcWTvQpGPIu3TfRpwAAAAAAAAAwCpjBAQAAAAAA\\\\nAAAODzM4AAAAAMDZpET4E0IiAzwlIoFuY12bVCZXtvfK2qWyiTu18SARCWiaHlSoJvpEYExSIvyT\\\\nI\\\\\/zNHFBZ315R3z5u5wNw+3P+gIOiCI\\\\\/D4XBsPFdFq9WqtVqatu2oToLH5XA5FCGUFc\\\\\/VarUqjdbm\\\\npwQAAADOLSrQKzncLzUyICXCXyLij3h8TWtPZX17RX1HRX27TK4chzMcNx4S4f+7b96LXxxFwOHQ\\\\ncuJDn1k3a8TDXvryWEl14zicD4BDcPKAg8\\\\\/lTI8NLsqcEhXgxeVYc7\\\\\/NSqXRVjd27jpztayuzVZj\\\\nOgeKIpEBXkumx6ZGBbgIRn110YRcbOh4f9fZ7v4he5weAAAA..."},{"id":177,"time":"22:40:50","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Responding to client with driver.getScreenshot() result: \"iVBORw0KGgoAAAANSUhEUgAABaAAAAuQCAIAAABzhw9vAAAAA3NCSVQICAjb4U\/gAAAgAElEQVR4\\nnOzdd3wT9\/0\/8M9py\/Lee+E9scELMMPY7J0AWSQhJM1q05l+mzZt82uzm7RpmjRN0jQhaZpJEiCE\\nvYcxw4AH2AwvvKc8ZGvf748DIUsnWZYlG8mv54M\/5LvTR2dzBt1Ln8\/7TXmve5kAAAAAAAAAADgy\\nzkSfAAAAAAAAAADAWCHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA\\n4SHgAAAAAAAAAACHh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACH\\nh4ADAAAAAAAAABweAg4AAAAAAAAAcHgIOAAAAAAAAADA4SHgAAAAAAAAAACHh4ADAAAAAAAAABwe\\nAg4AAAAAAAAAcHgIOAAAAAAAAADA4fEm+gSAdGcWTvQpGPIu3TfRpwAAAAAAAAAwCpjBAQAAAAAA\\nAAAODzM4AAAAAMDZpET4E0IiAzwlIoFuY12bVCZXtvfK2qWyiTu18SARCWiaHlSoJvpEYExSIvyT\\nI\/zNHFBZ315R3z5u5wNw+3P+gIOiCI\/D4XBsPFdFq9WqtVqatu2oToLH5XA5FCGUFc\/VarUqjdbm\\npwQAAADOLSrQKzncLzUyICXCXyLij3h8TWtPZX17RX1HRX27TK4chzMcNx4S4f+7b96LXxxFwOHQ\\ncuJDn1k3a8TDXvryWEl14zicD4BDcPKAg8\/lTI8NLsqcEhXgxeVYc7\/NSqXRVjd27jpztayuzVZj\\nOgeKIpEBXkumx6ZGBbgIRn110YRcbOh4f9fZ7v4he5weAAAAOBl\/T8ny7Ljs+NAAT8monhgd6BUd\\n6LU8J54QUlLddLKq8dTlJidIOjwkwpceLAz2dpvoE4GxKkiPsvAwBBwAOs4ccFAUmTol6PGlWe4u\\nQpsPnp..."},{"id":178,"time":"22:40:50","level":"VERBOSE","message":"[HTTP]
+        <-- GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/screenshot
+        200 586 ms - 175210"},{"id":179,"time":"22:40:50","level":"VERBOSE","message":"[HTTP]
+        "},{"id":180,"time":"22:40:51","level":"VERBOSE","message":"[HTTP] --> GET
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source"},{"id":181,"time":"22:40:51","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":182,"time":"22:40:51","level":"VERBOSE","message":"[MJSONWP] Driver
+        proxy active, passing request on via HTTP proxy"},{"id":183,"time":"22:40:51","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source]
+        to [GET http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\/source]
+        with body: {}"},{"id":184,"time":"22:40:51","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":\\\"<?xml
+        version=\\\\\\\"1.0\\\\\\\" encoding=\\\\\\\"UTF-8\\\\\\\"?><hierarchy rotation=\\\\\\\"0\\\\\\\"><android.widget.FrameLayout
+        index=\\\\\\\"0\\\\\\\" text=\\\\\\\"\\\\\\\" class=\\\\\\\"android.widget.FrameLayout\\\\\\\"
+        package=\\\\\\\"com.example.egonzalezh94.testproject\\\\\\\" content-desc=\\\\\\\"\\\\\\\"
+        checkable=\\\\\\\"false\\\\\\\" checked=\\\\\\\"false\\\\\\\" clickable=\\\\\\\"false\\\\\\\"
+        enabled=\\\\\\\"true\\\\\\\" focusable=\\\\\\\"false\\\\\\\" focused=\\\\\\\"false\\\\\\\"
+        scrollable=\\\\\\\"false\\\\\\\" long-clickable=\\\\\\\"false\\\\\\\" password=\\\\\\\"false\\\\\\\"
+        selected=\\\\\\\"false\\\\\\\" bounds=\\\\\\\"[0,0][1440,2678]\\\\\\\" resource-id=\\\\\\\"\\\\\\\"
+        instance=\\\\\\\"0\\\\\\\"><android.widget.LinearLayout index=\\\\\\\"0\\\\\\\"
+        text=\\\\\\\"\\\\\\\" class=\\\\\\\"android.widget.LinearLayout\\\\\\\" package=\\\\\\\"com.example.egonzalezh94.testproject\\\\\\\"
+        content-desc=\\\\\\\"\\\\\\\" checkable=\\\\\\\"false\\\\\\\" checked=\\\\\\\"false\\\\\\\"
+        clickable=\\\\\\\"false\\\\\\\" enabled=\\\\\\\"true\\\\\\\" focusable=\\\\\\\"false\\\\\\\"
+        focused=\\\\\\\"false\\\\\\\" scrollable=\\\\\\\"false\\\\\\\" long-clickable=\\\\\\\"false\\\\\\\"
+        password=..."},{"id":185,"time":"22:40:51","level":"VERBOSE","message":"[JSONWP
+        Proxy] Replacing sessionId 4b5f2ff0-4534-4995-be0d-67f7c00c3ce7 with 86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e"},{"id":186,"time":"22:40:51","level":"VERBOSE","message":"[HTTP]
+        <-- GET \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/source 200
+        160 ms - 7900"},{"id":187,"time":"22:40:51","level":"VERBOSE","message":"[HTTP]
+        "},{"id":188,"time":"22:40:51","level":"VERBOSE","message":"[HTTP] --> POST
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/appium\/app\/close"},{"id":189,"time":"22:40:51","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":190,"time":"22:40:51","level":"VERBOSE","message":"[debug] [MJSONWP]
+        Calling AppiumDriver.closeApp() with args: [\"86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\"]"},{"id":191,"time":"22:40:51","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am force-stop com.example.egonzalezh94.testproject''"},{"id":192,"time":"22:40:52","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Responding to client with driver.closeApp() result: null"},{"id":193,"time":"22:40:52","level":"VERBOSE","message":"[HTTP]
+        <-- POST \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/appium\/app\/close
+        200 175 ms - 76"},{"id":194,"time":"22:40:52","level":"VERBOSE","message":"[HTTP]
+        "},{"id":195,"time":"22:40:52","level":"VERBOSE","message":"[HTTP] --> POST
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/appium\/app\/launch"},{"id":196,"time":"22:40:52","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":197,"time":"22:40:52","level":"VERBOSE","message":"[debug] [MJSONWP]
+        Calling AppiumDriver.launchApp() with args: [\"86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\"]"},{"id":198,"time":"22:40:52","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell rm -rf \/data\/local\/tmp\/strings.json''"},{"id":199,"time":"22:40:52","level":"VERBOSE","message":"[debug]
+        [UiAutomator2] No app capability. Assuming it is already on the device"},{"id":200,"time":"22:40:52","level":"VERBOSE","message":"[debug]
+        [ADB] Getting install status for com.example.egonzalezh94.testproject"},{"id":201,"time":"22:40:52","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm list packages com.example.egonzalezh94.testproject''"},{"id":202,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] App is installed"},{"id":203,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am force-stop com.example.egonzalezh94.testproject''"},{"id":204,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell pm clear com.example.egonzalezh94.testproject''"},{"id":205,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [AndroidDriver] Performed fast reset on the installed ''com.example.egonzalezh94.testproject''
+        application (stop and clear)"},{"id":206,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] Checking app cert for null"},{"id":207,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] ''null'' doesn''t exist"},{"id":208,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] Device API level: 26"},{"id":209,"time":"22:40:53","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am start -W -n com.example.egonzalezh94.testproject\/com.example.egonzalezh94.testproject.LoginActivity
+        -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000''"},{"id":210,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Responding to client with driver.launchApp() result: null"},{"id":211,"time":"22:40:54","level":"VERBOSE","message":"[HTTP]
+        <-- POST \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\/appium\/app\/launch
+        200 2005 ms - 76"},{"id":212,"time":"22:40:54","level":"VERBOSE","message":"[HTTP]
+        "},{"id":213,"time":"22:40:54","level":"VERBOSE","message":"[HTTP] --> DELETE
+        \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e"},{"id":214,"time":"22:40:54","level":"VERBOSE","message":"[HTTP]
+        {}"},{"id":215,"time":"22:40:54","level":"VERBOSE","message":"[debug] [MJSONWP]
+        Calling AppiumDriver.deleteSession() with args: [\"86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e\"]"},{"id":216,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [BaseDriver] Event ''quitSessionRequested'' logged at 1547937654793 (22:40:54
+        GMT+0000 (UTC))"},{"id":217,"time":"22:40:54","level":"VERBOSE","message":"[Appium]
+        Removing session 86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e from our master session
+        list"},{"id":218,"time":"22:40:54","level":"VERBOSE","message":"[debug] [UiAutomator2]
+        Deleting UiAutomator2 session"},{"id":219,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [UiAutomator2] Deleting UiAutomator2 server session"},{"id":220,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Proxying [DELETE \/] to [DELETE http:\/\/localhost:8207\/wd\/hub\/session\/4b5f2ff0-4534-4995-be0d-67f7c00c3ce7]
+        with no body"},{"id":221,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [JSONWP Proxy] Got response with status 200: \"{\\\"sessionId\\\":\\\"4b5f2ff0-4534-4995-be0d-67f7c00c3ce7\\\",\\\"status\\\":0,\\\"value\\\":\\\"Session
+        deleted\\\"}\""},{"id":222,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e shell am force-stop com.example.egonzalezh94.testproject''"},{"id":223,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [Logcat] Stopping logcat capture"},{"id":224,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [ADB] Removing forwarded port socket connection: 8207 "},{"id":225,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [ADB] Running ''\/opt\/android-sdk-linux\/platform-tools\/adb -P 15007 -s
+        ce081718a128d525047e forward --remove tcp\\:8207''"},{"id":226,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [BaseDriver] Event ''quitSessionFinished'' logged at 1547937654982 (22:40:54
+        GMT+0000 (UTC))"},{"id":227,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Received response: null"},{"id":228,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [MJSONWP] But deleting session, so not returning"},{"id":229,"time":"22:40:54","level":"VERBOSE","message":"[debug]
+        [MJSONWP] Responding to client with driver.deleteSession() result: null"},{"id":230,"time":"22:40:54","level":"VERBOSE","message":"[HTTP]
+        <-- DELETE \/wd\/hub\/session\/86339a1a-d4bd-42ea-a4a2-1b89b2cd8f5e 200 192
+        ms - 76"},{"id":231,"time":"22:40:54","level":"VERBOSE","message":"[HTTP]
+        "}]'}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['frame-ancestors https://*.testobject.com']
+      Content-Type: [application/json]
+      Date: ['Sun, 20 Jan 2019 00:59:31 GMT']
+      Expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
+      Referrer-Policy: [no-referrer]
+      Set-Cookie: [JSESSIONID=eu_app2~eu_app2h54ougymstf412twt41g12fu215917.eu_app2;Path=/api;Domain=.app.testobject.com]
+      Strict-Transport-Security: [max-age=31536000; includeSubDomains; preload]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1

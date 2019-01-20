@@ -107,13 +107,61 @@ content = response.json()
 ### Skip Appium Test Report
 
 ```python
-response = to.watcher.skip_test_report('appium_session_id')
+response = to.watcher.skip_test_report(appium_session_id)
 ```
 
 ### Send Appium Test Report
 
 ```python
-response = to.watcher.skip_test_report('appium_session_id',True)
+response = to.watcher.skip_test_report(appium_session_id,True)
+```
+
+### Upload Application to Project
+
+```python
+response = to.storage.upload_app(upload_app_path, display_name, False)
+```
+
+### Get Test Report
+
+```python
+response = to.reports.get_test_report(test_report_id)
+```
+
+### Get Screenshot
+
+```python
+response = to.reports.get_screenshot(test_report_id, screenshot_id)
+```
+
+### Get Session Video
+
+```python
+response = to.reports.get_video(video_id)
+```
+
+### Get Appium Log
+
+```python
+response = to.reports.get_appium_log(test_report_id)
+```
+
+### Get Device Log
+
+```python
+response = to.reports.get_device_log(test_report_id)
+```
+
+### Get Device Vitals Log
+
+```python
+response = to.reports.get_device_log(test_report_id)
+```
+
+### Get XCUITest Log
+
+```python
+response = to.reports.get_xcuitest_log(test_report_id)
 ```
 
 ## Authors

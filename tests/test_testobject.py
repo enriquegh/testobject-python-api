@@ -1,104 +1,14 @@
 import vcr
 import os
 import pytest
+import uuid
 
 from testobject.client import TestObject
 from testobject.client import NoPasswordException
 
-EXPECTED_DEVICE_KEYS = set([
-    'internalStorageSize', 
-    'isArm', 
-    'ramSize', 
-    'isKeyGuardDisabled', 
-    'isTablet', 
-    'defaultOrientation', 
-    'supportsXcuiTest', 
-    'resolutionWidth', 
-    'apiLevel', 
-    'id', 
-    'isAlternativeIoEnabled', 
-    'cpuFrequency', 
-    'resolutionHeight', 
-    'hasHardwareKeyboard', 
-    'supportsMockLocations', 
-    'isPrivate', 
-    'dpiName', 
-    'isRooted', 
-    'abiType', 
-    'supportsAppiumWebAppTesting', 
-    'sdCardSize', 
-    'osVersion', 
-    'manufacturer', 
-    'hasOnScreenButtons', 
-    'name', 
-    'cpuCores', 
-    'pixelsPerPoint', 
-    'modelNumber', 
-    'screenSize', 
-    'supportsManualWebTesting', 
-    'deviceFamily', 
-    'os', 
-    'dpi'
+from .keys import *
 
-])
-EXPECTED_SUITE_DEVICES_KEYS = set([
-    'dataCenterId',
-    'dataCenterURL',
-    'deviceDescriptorIds'
-
-])
-EXPECTED_SUITE_KEYS = set([
-    'id',
-    'title',
-    'appVersionId',
-    'frameworkVersion',
-    'deviceIds'
-])
-
-EXPECTED_START_SUITE_KEYS = set([
-    'id',
-    'testReports'
-
-])
-
-EXPECTED_TEST_REPORT_KEYS = set([
-    'id',
-    'test'
-
-])
-
-EXPECTED_SESSION_REPORT_KEYS = set([
-    'entities',
-    'metaData'
-])
-
-EXPECTED_SESSION_REPORT_ENTITIY_KEYS = set([
-    'id',
-    'projectId',
-    'userId',
-    'deviceDescriptorId',
-    'usage',
-    'appId',
-    'frameworkAppId',
-    'testFrameworkType',
-    'testFrameworkVersion',
-    'testReportIds',
-    'testIds',
-    'batchId',
-    'startDateTime',
-    'endDateTime',
-    'durationInSeconds'
-
-])
-
-EXPECTED_TEST_KEYS = set([
-    'className',
-    'methodName',
-    'deviceId',
-    'dataCenterId'
-
-])
-
+UPLOAD_APP_PATH = os.environ.get('UPLOAD_APP_PATH',"./README.md")
 
 @pytest.fixture
 def to():
@@ -239,4 +149,86 @@ def test_skip_test_report(to):
 def test_report_test_result(to):
     response = to.watcher.report_test_result('95ffffe9-4eb0-418e-87d0-4f1d59fa19fe', False)
 
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization'])
+def test_upload_app(to):
+    display_name = str(uuid.uuid4())
+
+    response = to.storage.upload_app(UPLOAD_APP_PATH, display_name, False)
+
+    content = response.text
+
+    assert content, str
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/upload_app.yml', filter_headers=['authorization','App-DisplayName'])
+def test_upload_app_no_display_name(to):
+
+    response = to.storage.upload_app(UPLOAD_APP_PATH, None, False)
+
+    content = response.text
+
+    assert content, str
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_test_report.yml', filter_headers=['authorization'])
+def test_get_test_report(to):
+
+    response = to.reports.get_test_report(4)
+    content = response.json()
+
+    assert content, dict
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_screenshot.yml', filter_headers=['authorization'])
+def test_get_screenshot(to):
+
+    response = to.reports.get_screenshot(4, 1)
+
+    assert response.content, bytes 
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_video.yml', filter_headers=['authorization'])
+def test_get_video(to):
+
+    response = to.reports.get_video('8f1aac1e-5434-47e7-bb7b-81cc89436327')
+
+    assert response.content, bytes
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_appium_log.yml', filter_headers=['authorization'])
+def test_get_appium_log(to):
+    
+    response = to.reports.get_appium_log('4')
+    content = response.json()
+
+    assert content, list
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_device_log.yml', filter_headers=['authorization'])
+def test_get_device_log(to):
+    
+    response = to.reports.get_device_log('4')
+    content = response.json()
+
+    assert content, list
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_vitals_log.yml', filter_headers=['authorization'])
+def test_get_vitals_log(to):
+    
+    response = to.reports.get_vitals_log('6')
+    content = response.text
+
+    assert content, str
+    assert response.ok
+
+@vcr.use_cassette('tests/vcr_cassettes/get_xcuitest_log.yml', filter_headers=['authorization'])
+def test_get_xcuitest_log(to):
+
+    response = to.reports.get_xcuitest_log('3')
+    content = response.text
+
+    assert content, list
     assert response.ok

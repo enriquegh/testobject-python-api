@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://app.testobject.com/api/rest/v2/logs/3/xcuitest
+  response:
+    body: {string: '[{"id":1,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.279 DummyTestingAppUITests-Runner[357:12931] [injector.dylib] +load
+        called!\n2019-01-19 16:51:35.279 DummyTestingAppUITests-Runner[357:12931]
+        [injector.dylib] app launch arguments: (\n    \"\/var\/containers\/Bundle\/Application\/6F983D41-3426-4699-839B-51D39AE0FA9C\/DummyTestingAppUITests-Runner.app\/DummyTestingAppUITests-Runner\"\n)\n"},{"id":2,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.280 DummyTestingAppUITests-Runner[357:12931] [injector.dylib] app
+        launch environment variables: {\n    \"CFFIXED_USER_HOME\" = \"\/private\/var\/mobile\/Containers\/Data\/Application\/A5D419C9-7F7F-4510-AAF9-BF22081A2211\";\n    CLASSIC
+        = 4;\n    HOME = \"\/private\/var\/mobile\/Containers\/Data\/Application\/A5D419C9-7F7F-4510-AAF9-BF22081A2211\";\n    LOGNAME
+        = mobile;\n    PATH = \"\/usr\/bin:\/bin:\/usr\/sbin:\/sbin\";\n    SHELL
+        = \"\/bin\/sh\";\n    TMPDIR = \"\/private\/var\/mobile\/Containers\/Data\/Application\/A5D419C9-7F7F-4510-AAF9-BF22081A2211\/tmp\/\";\n    USER
+        = mobile;\n    XCTestConfigurationFilePath = \"\/private\/var\/mobile\/Containers\/Data\/Application\/A5D419C9-7F7F-4510-AAF9-BF22081A2211\/tmp\/7097ebf6-6cf2-4f20-81a1-eb7ee92ccaf7.xctestconfiguration\";\n    \"XPC_FLAGS\"
+        = 0x0;\n    \"XPC_SERVICE_NAME\" = \"UIKitApplication:com.apple.test.DummyTestingAppUITests-Runner[0x1904][64]\";\n    \"__CF_USER_TEXT_ENCODING\"
+        = \"0x1F5:0:0\";\n}\n"},{"id":3,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.287 DummyTestingAppUITests-Runner[357:12931] [injector.dylib] Successfully
+        reset the keychain for this app.\n"},{"id":4,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.287 DummyTestingAppUITests-Runner[357:12931] [HostConnector] -run
+        called!\n"},{"id":5,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.288 DummyTestingAppUITests-Runner[357:12931] Listening on 127.0.0.1:2345\n"},{"id":6,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.291 DummyTestingAppUITests-Runner[357:12931] [injector.dylib] Found
+        TestObject.plist with 8 entries.\n"},{"id":7,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.291 DummyTestingAppUITests-Runner[357:12931] [injector.dylib] INJSetting:
+        Returning default value (null) for key NSFileManager_containerURLForSecurityApplicationGroupIdentifier\n"},{"id":8,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.291 DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning
+        value YES for key CNContactStore_requestAccessForEntityType\n2019-01-19 16:51:35.292
+        DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning value YES for
+        key EKEventStore_requestAccessToEntityType\n"},{"id":9,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.292 DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning
+        value YES for key AVCaptureDevice_requestAccessForMediaType\n2019-01-19 16:51:35.292
+        DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning value YES for
+        key UIApplication_registerForRemoteNotifications\n2019-01-19 16:51:35.293
+        DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning value YES for
+        key UIApplication_registerUserNotificationSettings\n"},{"id":10,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.293 DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning
+        value YES for key CLLocationManager_requestWhenInUseAuthorization\n"},{"id":11,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.293 DummyTestingAppUITests-Runner[357:12931] INJSetting: Returning
+        value YES for key CLLocationManager_requestAlwaysAuthorization\n"},{"id":12,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.325 DummyTestingAppUITests-Runner[357:12931] +[CATransaction synchronize]
+        called within transaction\n"},{"id":13,"time":"00:51:35","level":"INFO","message":"2019-01-19
+        16:51:35.337 DummyTestingAppUITests-Runner[357:12931] Running tests...\n"}]'}
+    headers:
+      Content-Length: ['3966']
+      Content-Security-Policy: ['frame-ancestors https://*.testobject.com']
+      Content-Type: [application/json]
+      Date: ['Sun, 20 Jan 2019 01:04:15 GMT']
+      Expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
+      Referrer-Policy: [no-referrer]
+      Set-Cookie: [JSESSIONID=eu_app2~eu_app22xfsvg8qpgsu1fxwqy6aloo9k15925.eu_app2;Path=/api;Domain=.app.testobject.com]
+      Strict-Transport-Security: [max-age=31536000; includeSubDomains; preload]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
