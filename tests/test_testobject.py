@@ -209,7 +209,7 @@ def test_get_appium_log(to):
 @vcr.use_cassette('tests/vcr_cassettes/get_device_log.yml', filter_headers=['authorization'])
 def test_get_device_log(to):
     
-    response = to.reports.get_appium_log('4')
+    response = to.reports.get_device_log('4')
     content = response.json()
 
     assert content, list
