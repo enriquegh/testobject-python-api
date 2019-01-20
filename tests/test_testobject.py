@@ -197,6 +197,7 @@ def test_get_video(to):
     assert response.content, bytes
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/get_appium_log.yml', filter_headers=['authorization'])
 def test_get_appium_log(to):
     
     response = to.reports.get_appium_log('4')
@@ -205,6 +206,7 @@ def test_get_appium_log(to):
     assert content, list
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/get_device_log.yml', filter_headers=['authorization'])
 def test_get_device_log(to):
     
     response = to.reports.get_appium_log('4')
@@ -213,6 +215,7 @@ def test_get_device_log(to):
     assert content, list
     assert response.ok
 
+@vcr.use_cassette('tests/vcr_cassettes/get_vitals_log.yml', filter_headers=['authorization'])
 def test_get_vitals_log(to):
     
     response = to.reports.get_vitals_log('6')
