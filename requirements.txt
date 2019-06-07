@@ -7,7 +7,7 @@ contextlib2==0.5.5
 coverage==4.5.3
 funcsigs==1.0.2
 idna==2.8
-mock==2.0.0
+mock==3.0.5
 more-itertools==5.0.0
 pathlib2==2.3.3
 pbr==5.2.1
