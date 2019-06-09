@@ -1,0 +1,27 @@
+version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+skip_tags: true
+skip_branch_with_pr: true
+init:
+- cmd: '%PYTHON%/python -V'
+environment:
+  TO_USERNAME:
+    secure: 1QQ5t3SBe/a4hufA4pJ6cg==
+  TO_API_KEY:
+    secure: 6O4DB+pNfHOE3NPWjJpxWQdl3JT9CeNSvSUsgY4kUxAMW/myojUPINCslRGgRSqu
+  TO_PASSWORD:
+    secure: Dnhd2jdIbNeO0Y/CiC3fjQ==
+  matrix:
+  - PYTHON: C:\\Python27
+  - PYTHON: C:\\Python35
+  - PYTHON: C:\\Python37
+install:
+- cmd: >-
+    %PYTHON%/Scripts/easy_install -U pip
+
+    %PYTHON%/Scripts/pip install -r requirements.txt
+build: off
+test_script:
+- cmd: '%PYTHON%/Scripts/pytest'
+deploy: off
