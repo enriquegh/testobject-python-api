@@ -11,3 +11,13 @@ script:
   - pytest --cov=./
 after_script:
   - codecov
+deploy:
+  provider: pypi
+  user: enriquegh
+  password:
+    secure: "fvOSW39bnr9lE5ltrcXFWCKITPLAWert0opqLMvqEIUQJfDd1aCnIUdjmilK4luA/9p5w1QzXxdyNzcZQcrmmPMVjpYq1b73d38s7N48YrIsW1acRFvzRJ88YllfvW5uF+/+qpvsF3xoe+BPjoEtg7QcW94CKY5KxCuLRYmnJbvHTl96lKPC5LRxdjy5QDUJMcWWP2z5zWOe2tWnX2+2PN6FCN61IG4h80bASXAwPtkIHGD2dSmJBRLDsdPxzfaulymxmZpOI2SLiDRAfUUUUDB33+aqG7rPfpiLqjtR/cbRDzwUTEnvJDpJhFJkLsTUSB0FuwX5roG3pmle0Ungszxc/nmdvmNdwyRqAkmcYQZP8EK5ff6yITEZftqlrsRtEnFAoost+ZWKOfIWacIIBBc91DvVnG57ePbeR8k2Wkhyqw3tQymZxjBMImtpNfSk4uH952MayQ+GrCAtyrglj1aI6QxZkKjwUvCwsM0I07dJvXK5UdmSJf05XcrGe69r4H54EvAGyAakzcLLZOkK0tvcv/P30W7+8Slj8S2GR2OtvtQAj4PkNUdaHkL5tgF3ijd4OpfAVQjGP1MMMObXW+gLz98i4dmtQJCVuefoWAu4KXwh3JDC+sIIfiZr1NCif8AAJnjILyacnPIgcDW9j6iRqop/FbD1s7oYSKHRi00="
+  on:
+    tags: true
+    python: '3.7'
+  distributions: "sdist bdist_wheel"
+  skip_existing: true
