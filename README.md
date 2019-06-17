@@ -113,7 +113,7 @@ response = to.watcher.skip_test_report(appium_session_id)
 ### Send Appium Test Report
 
 ```python
-response = to.watcher.skip_test_report(appium_session_id,True)
+response = to.watcher.report_test_result(appium_session_id,True)
 ```
 
 ### Upload Application to Project
