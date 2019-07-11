@@ -155,7 +155,7 @@ response = to.reports.get_device_log(test_report_id)
 ### Get Device Vitals Log
 
 ```python
-response = to.reports.get_device_log(test_report_id)
+response = to.reports.get_vitals_log(test_report_id)
 ```
 
 ### Get XCUITest Log
