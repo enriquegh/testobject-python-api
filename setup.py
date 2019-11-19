@@ -1,10 +1,11 @@
 from setuptools import setup
+from os import path
 
-try:
-    import pypandoc
-    long_description = pypandoc.convert_file('README.md', 'rst')
-except(IOError, ImportError):
-    long_description = open('README.md').read()
+here = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 setup(
     name = 'testobject',
     packages = ['testobject'],
@@ -17,6 +18,7 @@ setup(
     url = 'https://github.com/enriquegh/testobject-python-api',
     install_requires=['requests', 'pyyaml'],
     long_description=long_description,
+    long_description_content_type='text/markdown',
     keywords = ['wrapper-api', 'testobject'],
     classifiers=[
         'Development Status :: 4 - Beta',
