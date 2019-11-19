@@ -13,7 +13,6 @@ environment:
   TO_PASSWORD:
     secure: Dnhd2jdIbNeO0Y/CiC3fjQ==
   matrix:
-  - PYTHON: C:\\Python27
   - PYTHON: C:\\Python35
   - PYTHON: C:\\Python37
 install:
