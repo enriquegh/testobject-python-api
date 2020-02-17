@@ -22,4 +22,4 @@ scandir==1.10.0
 six==1.13.0
 urllib3==1.25.7
 vcrpy==4.0.2
-wrapt==1.11.2
+wrapt==1.12.0
