@@ -14,7 +14,7 @@ pluggy==0.13.1
 py==1.8.1
 pypandoc==1.5
 pytest==5.4.1
-pytest-cov==2.8.1
+pytest-cov==2.10.1
 PyYAML==5.3.1
 requests==2.23.0
 scandir==1.10.0
