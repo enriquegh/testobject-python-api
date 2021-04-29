@@ -1,0 +1,47 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "13:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: more-itertools
+    versions:
+    - "> 5.0.0"
+  - dependency-name: coverage
+    versions:
+    - 5.3.1
+    - "5.4"
+    - "5.5"
+  - dependency-name: pytest-cov
+    versions:
+    - 2.10.1
+    - 2.11.1
+  - dependency-name: urllib3
+    versions:
+    - 1.26.2
+    - 1.26.3
+  - dependency-name: pytest
+    versions:
+    - 6.2.1
+    - 6.2.2
+  - dependency-name: certifi
+    versions:
+    - 2020.12.5
+  - dependency-name: py
+    versions:
+    - 1.10.0
+  - dependency-name: requests
+    versions:
+    - 2.25.1
+  - dependency-name: attrs
+    versions:
+    - 20.3.0
+  - dependency-name: vcrpy
+    versions:
+    - 4.1.1
+  - dependency-name: pbr
+    versions:
+    - 5.5.1
