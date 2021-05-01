@@ -1,7 +1,7 @@
 atomicwrites==1.4.0
 attrs==19.3.0
 certifi==2020.4.5.1
-chardet==3.0.4
+chardet==4.0.0
 codecov==2.1.8
 contextlib2==0.6.0.post1
 coverage==5.0.4
