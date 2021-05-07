@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/enriquegh/testobject-python-api.svg?branch=master)](https://travis-ci.org/enriquegh/testobject-python-api) [![Build status](https://ci.appveyor.com/api/projects/status/6pd46pbwrggq7rwa/branch/master?svg=true)](https://ci.appveyor.com/project/enriquegh/testobject-python-api/branch/master) [![codecov](https://codecov.io/gh/enriquegh/testobject-python-api/branch/master/graph/badge.svg)](https://codecov.io/gh/enriquegh/testobject-python-api) [![PyPI version](https://badge.fury.io/py/testobject.svg)](https://badge.fury.io/py/testobject) 
 
+# NOTE: This project is now archived. Please consider using Sauce Labs' Unified Platform instead.
+
 A Python library client for TestObject API
 
 For more on the API you can visit TestObject's docs [here](https://api.testobject.com/).
